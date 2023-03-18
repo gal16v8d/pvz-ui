@@ -1,12 +1,20 @@
-import { FormatListBulleted } from '@mui/icons-material';
-import { IconButton, Menu, MenuItem } from '@mui/material';
+import { ArrowForward, FormatListBulleted } from '@mui/icons-material';
+import {
+  Box,
+  IconButton,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  SwipeableDrawer,
+} from '@mui/material';
 import { TFunction } from 'i18next';
 import { FC, useState } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { API_BASE_CONFIG } from '../../config/ApiBaseConfig';
 import { usePvZContext } from '../../provider/PvZProvider';
 
-const ITEM_HEIGHT = 48;
+const DEFAULT_ANCHOR = 'left';
 
 const mapApiToMenu = (
   t: TFunction<'translation', undefined>,
@@ -19,30 +27,61 @@ const mapApiToMenu = (
     };
   });
 
+type SwipeableAnchorType = 'left' | 'right' | 'top' | 'bottom';
+
 const PvZMenu: FC = () => {
   const { t } = usePvZContext();
   const navigate = useNavigate();
   const options = mapApiToMenu(t, navigate);
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
+  const [anchorState, setAnchorState] = useState({ left: false });
 
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const toggleDrawer =
+    (anchor: SwipeableAnchorType, open: boolean) =>
+    (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event &&
+        event.type === 'keydown' &&
+        ((event as React.KeyboardEvent).key === 'Tab' ||
+          (event as React.KeyboardEvent).key === 'Shift')
+      ) {
+        return;
+      }
+
+      setAnchorState({ ...anchorState, [anchor]: open });
+    };
+
+  const menuOptions = (anchor: SwipeableAnchorType) => (
+    <Box
+      sx={{
+        background: 'var(--gray-900)',
+        backgroundColor: 'var(--gray-900)',
+        color: '#fff',
+      }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {options.map((option) => (
+          <ListItem key={option.label} onClick={option.command}>
+            <ListItemIcon>
+              <ArrowForward sx={{ color: '#fff' }} />
+            </ListItemIcon>
+            <ListItemText primary={option.label} />
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
 
   return (
     <div>
       <IconButton
         className="menuButton"
         aria-label="more"
-        id="long-button"
-        aria-controls={open ? 'long-menu' : undefined}
-        aria-expanded={open ? 'true' : undefined}
+        id="menu-button"
         aria-haspopup="true"
-        onClick={handleClick}
+        onClick={toggleDrawer(DEFAULT_ANCHOR, true)}
         sx={{
           background: 'var(--primary-color)',
           color: 'var(--primary-color-text)',
@@ -51,33 +90,15 @@ const PvZMenu: FC = () => {
       >
         <FormatListBulleted />
       </IconButton>
-      <Menu
-        id="long-menu"
-        MenuListProps={{
-          'aria-labelledby': 'long-button',
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        PaperProps={{
-          style: {
-            maxHeight: ITEM_HEIGHT * 4.5,
-            width: '20ch',
-          },
-        }}
+      <SwipeableDrawer
+        sx={{ backgroundColor: '#fff0' }}
+        anchor={DEFAULT_ANCHOR}
+        open={anchorState[DEFAULT_ANCHOR]}
+        onClose={toggleDrawer(DEFAULT_ANCHOR, false)}
+        onOpen={toggleDrawer(DEFAULT_ANCHOR, true)}
       >
-        {options.map((option) => (
-          <MenuItem
-            key={option.label}
-            onClick={() => {
-              handleClose();
-              option.command();
-            }}
-          >
-            {option.label}
-          </MenuItem>
-        ))}
-      </Menu>
+        {menuOptions(DEFAULT_ANCHOR)}
+      </SwipeableDrawer>
     </div>
   );
 };

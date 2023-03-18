@@ -3,6 +3,7 @@ import { API_OBJECT } from '../../config/ApiBaseConfig';
 import AchievementCard from '../achievement/AchievementCard';
 import GardenCard from '../garden/GardenCard';
 import ItemCard from '../item/ItemCard';
+import MiniGameCard from '../minigame/MiniGameCard';
 
 interface DataId {
   _id: string;
@@ -18,6 +19,8 @@ export const mapData = (apiObject: ApiConfig, data: unknown) => {
       return <GardenCard key={key} data={data} />;
     case API_OBJECT.ITEM:
       return <ItemCard key={key} data={data} />;
+    case API_OBJECT.MINIGAME:
+      return <MiniGameCard key={key} data={data} />;
     default:
       return undefined;
   }

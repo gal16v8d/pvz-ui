@@ -1,0 +1,357 @@
+[
+  {
+    "_id": "6682068c-b10e-4c7e-9492-d062e31a2361",
+    "level": "1-1",
+    "unlock": ["a38e4bae-36d3-458a-ae80-3517e5923c8b"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "6827c7e6-e2cc-4c39-b378-d7087af3a95a",
+    "level": "1-2",
+    "unlock": ["a31a2d7d-1532-413c-97c5-f8904632545e"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "d3cdb482-68df-4bd7-b0e7-eaff63f78d94",
+    "level": "1-3",
+    "unlock": ["1f049be0-a3ff-4f3c-ad39-6cc7eda040cd"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "83c7faff-8115-4f36-8024-4afbb008092f",
+    "level": "1-4",
+    "unlock": ["571670ad-23e7-483d-ab7e-8721bf44041f"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "a68f1dd5-3d75-429d-84a4-64201edbbe7c",
+    "level": "1-5",
+    "unlock": ["f1e72d38-a025-41ae-9653-ed5bacae8031"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "2b70858b-1b88-4045-834d-e03df427032e",
+    "level": "1-6",
+    "unlock": ["f74aa22c-666f-4131-af40-098033e8dcea"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "acafc6ca-57ae-45a3-bba4-6572d94e57f7",
+    "level": "1-7",
+    "unlock": ["5c9d9bc7-6799-42d2-807a-73dd603dbbc2"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "8cbc2460-3782-495f-b900-0dad7b89236d",
+    "level": "1-8",
+    "unlock": ["76c7810e-73aa-4bf9-baff-87abd59d8f26"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "c078c1c2-d84c-4bde-92c5-7e03fad6b3fe",
+    "level": "1-9",
+    "unlock": ["d4eb1fd8-3ac4-4d58-a867-e86c5391708e"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "ef274ac0-9e69-4883-9f16-9443269d091c",
+    "level": "1-10",
+    "unlock": ["b1222476-6c2d-44dc-86e9-a07b8da61154"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "2c3b634e-b299-4e10-b9f9-68f87af9fc0c",
+    "level": "2-1",
+    "unlock": ["5b8b8ffc-e835-4b4a-b864-0873e2471d40"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "b396501a-1174-42f2-be07-3787bdcfe82a",
+    "level": "2-2",
+    "unlock": ["b15f0430-05f5-495b-b0fb-3396a981e746"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "50b5d02f-2586-4da9-b618-2da12651df7c",
+    "level": "2-3",
+    "unlock": ["d03f724a-e66b-47c6-9e20-4f2c4267362d"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "b3171c26-e367-47e4-bcce-2e75280e6608",
+    "level": "2-4",
+    "unlock": ["bfff7eb3-ef50-4697-ac2b-f82e003ff0f4"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "b9655162-80b1-49c6-9e04-eebe9f557873",
+    "level": "2-5",
+    "unlock": ["d25c6557-dd81-4b2e-a506-df2cc74635f8"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "100fe763-4118-464a-80be-51851182b08a",
+    "level": "2-6",
+    "unlock": ["5475c338-f277-4991-a686-b75d9c244ed5"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "86123a54-8c3f-4bc7-90ea-b2fd647d7320",
+    "level": "2-7",
+    "unlock": ["7b470146-806f-4002-aca1-5aea093d7088"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "d3340385-e5b9-4d29-a447-029fc0398d2e",
+    "level": "2-8",
+    "unlock": ["5b4db20b-6c81-44b1-93a8-4755650dd095"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "a24c7f49-dcec-4605-a80c-0b86689b357e",
+    "level": "2-9",
+    "unlock": ["832a81c9-3da0-4e29-8ae6-d3bcb7197c42"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "4a2e483d-fa42-4b08-9b42-28fb5022fd18",
+    "level": "2-10",
+    "unlock": ["fc1d1834-4b78-4ed9-b74a-7a85f3135505"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "06b87eb0-6a22-4660-87dd-d65086443b17",
+    "level": "3-1",
+    "unlock": ["34bf1546-c7bc-4b99-adaf-1267b04f3d94"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "990510fa-02da-48b0-a0a4-46d430f86786",
+    "level": "3-2",
+    "unlock": ["fbb9ac33-f729-41cf-b93c-452f7ca81232"],
+    "ref": "plant",
+    "is_minigame": false,
+    "notes": "minigame menu unlocked"
+  },
+  {
+    "_id": "914486aa-a613-4fd9-b898-8f2960c81677",
+    "level": "3-3",
+    "unlock": ["f1dd6357-4d1b-4596-b3da-59d05dbead65"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "114947d1-229f-4139-82a2-7e8e3146a33e",
+    "level": "3-4",
+    "unlock": ["d2dc0ad1-2856-428c-be04-fdfc6bf5e64c"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "4f372fad-d71d-415a-889c-0c02d8c2c122",
+    "level": "3-5",
+    "unlock": ["5eef51ce-28c2-4445-9f49-97d487f10084"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "46415079-a348-4228-975d-91ef459d2fa2",
+    "level": "3-6",
+    "unlock": ["012b225e-323a-4c73-b011-67de27a03fdb"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "02754333-96b0-45c9-93ed-3c5cb5c4c13c",
+    "level": "3-7",
+    "unlock": ["320ef33b-88ef-4f9b-a03b-6c09179fdfc5"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "01b91ac2-12e8-4489-a14a-17c81527f68f",
+    "level": "3-8",
+    "unlock": ["86f4ed1c-becf-4bb9-b294-3e2593cd2c03"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "5af21728-70dc-4104-a3bb-d5a157acd99c",
+    "level": "3-9",
+    "unlock": ["4f539781-9265-44ed-871c-7c2b2e5085c7"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "a398ddb5-6fe7-477d-bd00-1bef99031d51",
+    "level": "3-10",
+    "unlock": ["eedc5fb0-bbcd-46a8-a77b-bd61ed1bf903"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "5e95e6e6-60d7-44cb-a51f-7f705ccec431",
+    "level": "4-1",
+    "unlock": ["b205b67f-d75d-450c-9592-6f412457fcf8"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "7bc9d3fb-c7e2-46fb-987d-0e030ad1f769",
+    "level": "4-2",
+    "unlock": ["64d9c98b-d307-4739-904d-fbc647d61782"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "56f7c621-4b10-4866-8ef5-f805a6ea35c8",
+    "level": "4-3",
+    "unlock": ["8eca0a01-628b-4f9b-91ad-87c0351f1eeb"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "6193bcab-5c50-44fe-8430-f26e8a315d90",
+    "level": "4-4",
+    "unlock": ["011c6b4d-2dd6-41f4-99fb-aa6fe9bc7165"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "76b8df82-520c-40cc-a3ce-708a430620cf",
+    "level": "4-5",
+    "unlock": ["12ed5aac-5be9-4269-8869-4aed958b3c22"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "be2e4da3-f3f2-45ef-ad47-3527ce8fca12",
+    "level": "4-6",
+    "unlock": ["c781f832-3dba-47c5-aa05-3192594a0d6f"],
+    "ref": "plant",
+    "is_minigame": false,
+    "notes": "puzzle menu unlocked"
+  },
+  {
+    "_id": "6e20d17b-8def-48fd-93f4-f7e546aeb3cd",
+    "level": "4-7",
+    "unlock": ["919e304d-70d4-4602-9d33-642dc466c81f"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "432ea8f2-3969-49c7-aacc-938857e6bbfc",
+    "level": "4-8",
+    "unlock": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "1d812ec5-fea7-4e8f-9777-b8d5c1530a3f",
+    "level": "4-9",
+    "unlock": ["468936b9-d965-4f70-93a4-eaa9b3b4c2bf"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "dd1e4462-954f-4a75-b947-1a581c60146d",
+    "level": "4-10",
+    "unlock": ["5b9c348c-69e7-487f-94d1-a7ff3b0ee70c"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "b1d9a664-eedb-4b2a-be46-e9d15c763a27",
+    "level": "5-1",
+    "unlock": ["58e3f557-71b8-4297-a796-7e95aafec364"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "8300b3ff-a3d4-4e57-a071-b9bab10c7394",
+    "level": "5-2",
+    "unlock": ["cc6ea657-1a81-467e-a9a8-3a9f44e652b1"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "2b83192c-4150-47d8-98f6-0e5d998c22c9",
+    "level": "5-3",
+    "unlock": ["d3124ef1-26f1-488c-a764-dd542b8bcb3e"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "8aa0984a-185c-487b-b3a7-2c644bd700f5",
+    "level": "5-4",
+    "unlock": ["43264728-44b7-466c-83b5-751181615549"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "c0a75c62-85ff-40ce-98f5-c173af8e0d57",
+    "level": "5-5",
+    "unlock": ["98bf2962-4c0d-4cf1-bbba-8d3653ae4e3c"],
+    "ref": "plant",
+    "is_minigame": true
+  },
+  {
+    "_id": "2f8b81b4-fef9-4a92-aa32-21e990272371",
+    "level": "5-6",
+    "unlock": ["59556f16-614e-4916-91d4-00107cc00695"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "632fd646-8229-47ef-9cc2-b1e151b7f9bc",
+    "level": "5-7",
+    "unlock": ["4d0beb01-0fca-423c-b879-f45de4ab26f1"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "49ffd00b-67b2-4702-9714-b3b4720d4bf3",
+    "level": "5-8",
+    "unlock": ["845089ad-3e3e-4c43-bd72-0ee35e708219"],
+    "ref": "plant",
+    "is_minigame": false
+  },
+  {
+    "_id": "ac94c50e-48ba-45fe-b461-7138dff1c9ba",
+    "level": "5-9",
+    "unlock": ["ed2141c5-0fab-4ee8-8e80-965b5ff230b1"],
+    "ref": "item",
+    "is_minigame": false
+  },
+  {
+    "_id": "b91c6596-f6bd-4cab-98cd-04fc43740e40",
+    "level": "5-10",
+    "unlock": [
+      "5e8bba18-f62f-4714-add9-e0029ae9411c",
+      "0e5806f9-1e33-47bc-84f4-b57fc2790f59"
+    ],
+    "ref": "item",
+    "is_minigame": true
+  }
+]

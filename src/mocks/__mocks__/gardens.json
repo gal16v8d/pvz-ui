@@ -1,0 +1,30 @@
+[
+  {
+    "_id": "84fc25de-1c79-4161-b3e9-7ea3b74d62ab",
+    "number": 1,
+    "name": "Day Garden",
+    "max_plants": 32,
+    "coin_helper": true
+  },
+  {
+    "_id": "160325cf-a53b-4493-9b09-c816818f0f7b",
+    "number": 2,
+    "name": "Night Garden",
+    "max_plants": 8,
+    "coin_helper": false
+  },
+  {
+    "_id": "8705d363-6c1e-4797-90c5-9dd7649d0125",
+    "number": 3,
+    "name": "Aquarium Garden",
+    "max_plants": 8,
+    "coin_helper": false
+  },
+  {
+    "_id": "c9fe43d5-c004-4832-bf9d-c7018cc8697b",
+    "number": 4,
+    "name": "Tree Garden",
+    "max_plants": 1,
+    "coin_helper": false
+  }
+]

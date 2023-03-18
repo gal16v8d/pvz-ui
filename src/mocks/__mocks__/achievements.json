@@ -1,0 +1,102 @@
+[
+  {
+    "_id": "eb53db40-09de-4b2a-b3d9-39c7d6313f8e",
+    "name": "Home Lawn Security",
+    "description": "Complete adventure mode."
+  },
+  {
+    "_id": "cbad2739-9e3c-44f9-945b-34ad3eb6499b",
+    "name": "Nobel Peas Prize",
+    "description": "Get the golden sunflower trophy."
+  },
+  {
+    "_id": "ef71c066-30db-45b1-bdc3-6038b74be722",
+    "name": "Better Off Dead",
+    "description": "Get to a streak of 10 in i. Zombie Endless"
+  },
+  {
+    "_id": "2d37f007-4829-4dcf-a2f7-d3f70de7753a",
+    "name": "China Shop",
+    "description": "Get to a streak of 15 in Vasebreaker Endless"
+  },
+  {
+    "_id": "64320e15-ffd6-493a-8afe-b8db7467b6e4",
+    "name": "Spudow!",
+    "description": "Blow up a zombie using a Potato Mine."
+  },
+  {
+    "_id": "b222facd-fa0c-4d2c-ba76-99fd9bc772a6",
+    "name": "Explodonator",
+    "description": "Take out 10 full-sized zombies with a single Cherry Bomb."
+  },
+  {
+    "_id": "c99784f8-af77-45bb-bb8a-5d891c7ec33e",
+    "name": "Morticulturalist",
+    "description": "Collect all 49 plants (including plants from Crazy Dave's shop)."
+  },
+  {
+    "_id": "0e89fa79-9ef6-4f14-be3b-ee1bbdfc82ef",
+    "name": "Don't Pea In The Pool",
+    "description": "Complete a daytime pool level without using Pea Shooters of any kind."
+  },
+  {
+    "_id": "47f1070e-dc09-431c-936c-5ec2b6977274",
+    "name": "Roll Some Heads",
+    "description": "Bowl over 5 zombies with a single Wall-Nut."
+  },
+  {
+    "_id": "507b879c-e7ce-4374-ac00-bb6c2903394e",
+    "name": "Grounded",
+    "description": "Defeat a normal roof level without using any catapult plants."
+  },
+  {
+    "_id": "9bc3749a-9d2b-42f1-9d44-beb94188955c",
+    "name": "Zombologist",
+    "description": "Discover the Yeti Zombie."
+  },
+  {
+    "_id": "55596470-f05e-484b-b9e4-f2abb93bef65",
+    "name": "Penny Pincher",
+    "description": "Pick up 30 coins in a row on a single level without letting any disappear."
+  },
+  {
+    "_id": "2e680da1-efd2-4759-9a81-138ccc5b9108",
+    "name": "Sunny Days",
+    "description": "Get 8000 sun during a single level."
+  },
+  {
+    "_id": "7a860a0c-65a5-4f39-98db-9089f476344a",
+    "name": "Popcorn Party",
+    "description": "Defeat 2 Gargantuars with corn cob missiles in a single level."
+  },
+  {
+    "_id": "72ed3dd6-399a-4391-8a11-7fc6aa4c348c",
+    "name": "Good Morning",
+    "description": "Complete a daytime level by planting only mushrooms and coffee beans."
+  },
+  {
+    "_id": "86c31508-5722-46d3-ae30-a7d1fdbf66b3",
+    "name": "No Fungus Among Us",
+    "description": "Complete a nighttime level without planting any mushrooms."
+  },
+  {
+    "_id": "b1652ba5-7627-40bc-8708-ea00bc6d3cd7",
+    "name": "Immortal",
+    "description": "Survive 20 waves of pure zombie ferocity."
+  },
+  {
+    "_id": "179c4d75-fe09-4f1f-9a9a-24a3b4ec9072",
+    "name": "Towering Wisdom",
+    "description": "Grow the tree of wisdom to 100 feet."
+  },
+  {
+    "_id": "8af8dd38-fe21-4359-80bc-e66e5682fd4d",
+    "name": "Mustache Mode",
+    "description": "Enable mustache mode."
+  },
+  {
+    "_id": "54fbc939-c5ae-4eaa-9901-9b1ce5c891d2",
+    "name": "Beyond the Grave",
+    "description": "Beat all 20 minigames."
+  }
+]

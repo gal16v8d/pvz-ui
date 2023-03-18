@@ -1,0 +1,62 @@
+[
+  {
+    "_id": "571670ad-23e7-483d-ab7e-8721bf44041f",
+    "name": "Shovel",
+    "note": "Let you dig up a plant to make room for another"
+  },
+  {
+    "_id": "d4eb1fd8-3ac4-4d58-a867-e86c5391708e",
+    "name": "Note 1",
+    "note": "Hello, we are about to launch an all-out attack on your houze. Sincerely. the zombies"
+  },
+  {
+    "_id": "bfff7eb3-ef50-4697-ac2b-f82e003ff0f4",
+    "name": "Almanac",
+    "note": "Keeps track of all plants and zombies you encounter"
+  },
+  {
+    "_id": "832a81c9-3da0-4e29-8ae6-d3bcb7197c42",
+    "name": "Note 2",
+    "note": "Hello, we wood like to visit for a midnight znack. How does icecream and brains zound? sincerely, the zombies"
+  },
+  {
+    "_id": "d2dc0ad1-2856-428c-be04-fdfc6bf5e64c",
+    "name": "Crazy Dave's car key",
+    "note": "Now you can visit crazy Dave's shop"
+  },
+  {
+    "_id": "4f539781-9265-44ed-871c-7c2b2e5085c7",
+    "name": "Note 3",
+    "note": "Hello, we herd you were having a pool party. We think that iz fun. Well be rite over. sincerely, the zombies"
+  },
+  {
+    "_id": "011c6b4d-2dd6-41f4-99fb-aa6fe9bc7165",
+    "name": "Taco",
+    "note": "what are you going to do with a taco? - can be sold by $1000"
+  },
+  {
+    "_id": "468936b9-d965-4f70-93a4-eaa9b3b4c2bf",
+    "name": "Note 4",
+    "note": "Hello, this iz your muther. Please come over to my house for 'meatloaf' Leave your front door open and your lawn unguarded. sincerely, mom (not the zombies)"
+  },
+  {
+    "_id": "43264728-44b7-466c-83b5-751181615549",
+    "name": "Waterin can",
+    "note": "Now you can play zen garden mode"
+  },
+  {
+    "_id": "ed2141c5-0fab-4ee8-8e80-965b5ff230b1",
+    "name": "Note 5",
+    "note": "Homeowner, You have failed to submit to our nightful claim. Be advised that unless you comply, we will be forced to take extreme action. Please remit your home and brains to us forthuith. Sincerely, Dr. Edgar Zomboss"
+  },
+  {
+    "_id": "5e8bba18-f62f-4714-add9-e0029ae9411c",
+    "name": "Plate Sunflower Trophy",
+    "note": "Adventure mode complete"
+  },
+  {
+    "_id": "0e5806f9-1e33-47bc-84f4-b57fc2790f59",
+    "name": "Last Note",
+    "note": "OK, you win. No more eatin brains for us. We just want to make music video with you now. sincerely, the zombies"
+  }
+]

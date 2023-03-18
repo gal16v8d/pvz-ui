@@ -27,7 +27,7 @@ const Listing: FC<ListingProps> = ({ apiObject }) => {
         sx={{
           display: 'grid',
           gap: 1,
-          gridTemplateColumns: 'repeat(2, 1fr)',
+          gridTemplateColumns: `repeat(${apiObject.gridColumns}, 1fr)`,
         }}
       >
         {data?.map((d) => mapData(apiObject, d))}

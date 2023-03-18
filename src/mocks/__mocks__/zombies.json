@@ -1,0 +1,266 @@
+[
+  {
+    "description": "Regular Garden-variety Zombies.",
+    "_id": "c20e9b7f-8d77-4ea9-8d1e-74ef1202e00b",
+    "number": 1,
+    "name": "Zombie",
+    "text": "This zombie loves loves brains. Can't get enough. Brains, brains, brains, day in and night out. Old and stinky brains? Rotten brains? Brains clearly past their prime? Doesn't matter. Regular zombie wants'em",
+    "toughness": "low"
+  },
+  {
+    "description": "Flag Zombie marks the arrival of a huge pile or 'wave' of zombies.",
+    "_id": "14c67736-08f6-4ef7-bcd5-91f1acae3691",
+    "number": 2,
+    "name": "Flag Zombie",
+    "text": "Make no mistake, Flag Zombie loves brains. But somewhere down the line he also picked up a fascination with flags. Maybe it's because the flags always have brains on them. Hard to say.",
+    "toughness": "low"
+  },
+  {
+    "description": "His traffic cone headpiece makes him twice as tough as normal zombies.",
+    "_id": "30d4c552-c6c6-4722-af05-970dfe115917",
+    "number": 3,
+    "name": "Conehead Zombie",
+    "text": "Conehead Zombie shuffled mindlessly forward like every other zombie. But something made him stop, made him pick up a traffic cone and stick it on his head. Oh yeah. He likes to party.",
+    "toughness": "medium"
+  },
+  {
+    "description": "Pole Vaulting Zombie vaults with a pole.",
+    "speed": ["fast", "normal"],
+    "speed_notes": "fast, then normal (after jump)",
+    "special": "jumps the first plant he runs into",
+    "_id": "473d2244-be02-4481-893b-388c84dddf8b",
+    "number": 4,
+    "name": "Pole Vaulting Zombie",
+    "text": "Some zombies take it further, aspire more, push themselves beyond the normal into greatness. That's Pole Vaulting Zombie right there. That is so him.",
+    "toughness": "medium"
+  },
+  {
+    "description": "His bucket hat makes him extremely resistant to damage.",
+    "weakness": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
+    "_id": "c76cd9fd-939c-4547-a8ea-e04be3ac7403",
+    "number": 5,
+    "name": "Buckethead Zombie",
+    "text": "Buckethead Zombie always wore a bucket. Part of it was to assert his uniqueness in an uncaring world. Mostly he just forgot it was there in the first place.",
+    "toughness": "high"
+  },
+  {
+    "description": "His newspaper provides limited defense.",
+    "toughness_notes": {
+      "newspaper_toughness": "low"
+    },
+    "speed": ["normal", "fast"],
+    "speed_notes": "normal, then fast (after losing newspaper)",
+    "_id": "dec7eb51-af4c-4883-8a61-6f183981a906",
+    "number": 6,
+    "name": "Newspaper Zombie",
+    "text": "Newspaper Zombie was *this* close to finishing his sudoku puzzle. No wonder he's freaking out.",
+    "toughness": "low"
+  },
+  {
+    "description": "His screen door is an effective shield.",
+    "toughness_notes": {
+      "screen_door_toughness": "high"
+    },
+    "weakness": [
+      "b15f0430-05f5-495b-b0fb-3396a981e746",
+      "3947eef5-7f60-40e3-871e-048ae4c503d2"
+    ],
+    "_id": "9de73dac-7900-4584-9562-520802d48405",
+    "number": 7,
+    "name": "Screen Door Zombie",
+    "text": "He got his screen door from the last inexperty defended home he visited, after he ATE THE HOMEOWNER'S BRAINS.",
+    "toughness": "low"
+  },
+  {
+    "description": "Footbal Zombie makes the big plays.",
+    "speed": ["fast"],
+    "weakness": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
+    "_id": "13b67e1a-d942-4b77-93d5-09d11e824cca",
+    "number": 8,
+    "name": "Football Zombie",
+    "text": "Football Zombie gives 110 percent whenever he's on the field. He's a team player who delivers both offensively and defensively. He has no idea what a football is.",
+    "toughness": "very high"
+  },
+  {
+    "description": "Any resemblance between Dancing Zombie and persons living or dead is purely coincident.",
+    "special": "summons back-up dancers",
+    "_id": "3f8e123d-2e29-4300-bd94-dba429b1e71d",
+    "number": 9,
+    "name": "Dancing Zombie",
+    "text": "Dancing Zombie's latest album, 'GrarrBRAINSarblarbl', is already rocketing up the undead charts.",
+    "toughness": "medium"
+  },
+  {
+    "description": "These zombies appear in sets of four whenever Dancing ZOmbie rocks out.",
+    "_id": "0efe101c-02ce-48b5-8ace-61611872baec",
+    "number": 10,
+    "name": "Backup Dancer",
+    "text": "Backup Dancer Zombie spent six years perfecting his art at the CHewliard Performing Arts School in Zombie New York City.",
+    "toughness": "low"
+  },
+  {
+    "description": "The ducky tube allows this zombie to float on water.",
+    "constraint": "Only appears in the pool",
+    "_id": "29a4b965-7c0b-4b67-bc71-e21fff5a9999",
+    "number": 11,
+    "name": "Ducky Tube Zombie",
+    "text": "It takes a certain kind of zombie to be a Ducky Tuber. Not every zombie can handle it. Some crack. They can't take it. They walk away and give up on brains forever.",
+    "toughness": "low"
+  },
+  {
+    "description": "Snorkel zombies can swim underwater.",
+    "special": "submerges to avoid attacks",
+    "constraint": "Only appears in the pool",
+    "_id": "70cf2b73-fd9a-49a7-8a92-974b5e037f70",
+    "number": 12,
+    "name": "Snorkel Zombie",
+    "text": "Zombies don't breathe. They don't need air. So why does Snorkel Zombie need a snorkel to swim underwater? Answer: peer pressure.",
+    "toughness": "low"
+  },
+  {
+    "special": "crushes plants, leaves an ice trail",
+    "_id": "2cb9c682-37d5-45e0-8509-4dce76bf58b0",
+    "number": 13,
+    "name": "Zomboni",
+    "text": "Not to be mistaken for a Zamboni® brand ice resurfacing machine. Zamboni® and the image of the ice-resurfacing machine are registered trademarks of Frank J. Zamboni & Co., Inc., and 'Zomboni' is used with permission. For all your non-zombie related ice resurfacing needs, visit www.zamboni.com!",
+    "toughness": "high"
+  },
+  {
+    "toughness_notes": {
+      "bobsled_toughness": "low"
+    },
+    "special": "only appears on ice",
+    "_id": "a41d0aaf-57ba-4a01-875a-8df753b822ba",
+    "number": 14,
+    "name": "Zombie Bobsled Team",
+    "text": "Zombie Bobsled Team worked hard to get where they are. They libe together, eat brains together and train together to become a cohesive zombie unit.",
+    "toughness": "low"
+  },
+  {
+    "speed": ["fast", "slow"],
+    "speed_notes": "fast, then slow (after jump)",
+    "special": "jumps over the first plant he runs into",
+    "constraint": "Only appears in the pool",
+    "_id": "1de9698e-30a5-4794-9c73-49e151eabd2a",
+    "number": 15,
+    "name": "Dolphin Rider Zombie",
+    "text": "The dolphin is also a zombie",
+    "toughness": "medium"
+  },
+  {
+    "speed": ["fast"],
+    "special": "jack-in-the-box explodes",
+    "weakness": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
+    "_id": "09c8e79d-7ba3-4c72-8dfa-8f24765bab9e",
+    "number": 16,
+    "name": "Jack-in-the-box Zombie",
+    "text": "The zombie shivers, not because he's cold but because he's crazy.",
+    "toughness": "medium"
+  },
+  {
+    "special": "flying",
+    "weakness": [
+      "64d9c98b-d307-4739-904d-fbc647d61782",
+      "8eca0a01-628b-4f9b-91ad-87c0351f1eeb"
+    ],
+    "_id": "a340e9d2-c0cc-419d-b0c2-3490a1de1af9",
+    "number": 17,
+    "name": "Balloon Zombie",
+    "text": "Balloon Zombie really lucked out. The balloon thing really works and none of the other zombies have picked up on it.",
+    "toughness": "low"
+  },
+  {
+    "speed": ["fast", "slow"],
+    "special": "tunnels underground and appears on the left side of the lawn.",
+    "weakness": [
+      "12ed5aac-5be9-4269-8869-4aed958b3c22",
+      "3947eef5-7f60-40e3-871e-048ae4c503d2"
+    ],
+    "_id": "72fcadbd-8715-4618-9cf1-4b3d961df34c",
+    "number": 18,
+    "name": "Digger Zombie",
+    "text": "Digger Zombie spends three days a week getting his excavation permits in order.",
+    "toughness": "medium"
+  },
+  {
+    "speed": ["fast", "slow"],
+    "special": "tunnels underground and appears on the left side of the lawn.",
+    "weakness": [
+      "12ed5aac-5be9-4269-8869-4aed958b3c22",
+      "3947eef5-7f60-40e3-871e-048ae4c503d2"
+    ],
+    "_id": "89e76e3f-795a-44a0-8be3-09058fc21da3",
+    "number": 19,
+    "name": "Pogo Zombie",
+    "text": "Digger Zombie spends three days a week getting his excavation permits in order.",
+    "toughness": "medium"
+  },
+  {
+    "description": "A rare and curious creature",
+    "special": "runs away after a short while",
+    "_id": "f95cec84-f634-4d08-968d-ae0061fcfe7d",
+    "number": 20,
+    "name": "Zombie Yeti",
+    "text": "Little is known about the Zombie Yeti other than his name, birth date, social security number, educational history, past work experience and sandwich preference (roast beef and swiss).",
+    "toughness": "high"
+  },
+  {
+    "description": "Bungee Zombie attacks from above.",
+    "special": "descends from the sky and steals a plant",
+    "_id": "b04cd261-6881-4282-99c9-a259968725f6",
+    "number": 21,
+    "name": "Bungee Zombie",
+    "text": "Bungee Zombie loves to take risks. After all, what's the point of being dead if you don't live a little?",
+    "toughness": "medium"
+  },
+  {
+    "description": "Ladder Zombie climbs over obstacles.",
+    "toughness_notes": {
+      "ladder_toughness": "medium"
+    },
+    "speed": ["fast", "slow"],
+    "speed_notes": "fast, then slow (after placing ladder)",
+    "weakness": [
+      "b15f0430-05f5-495b-b0fb-3396a981e746",
+      "3947eef5-7f60-40e3-871e-048ae4c503d2"
+    ],
+    "_id": "466deba0-3217-4f24-9a9a-e2d896546438",
+    "number": 22,
+    "name": "Ladder Zombie",
+    "text": "He picked the ladder up for $ 8.99",
+    "toughness": "medium"
+  },
+  {
+    "description": "Catapult Zombie operates heavy machinery.",
+    "special": "lobs basketballs at your plants",
+    "_id": "80d731c6-551a-4b0d-8543-0b7d07d9bbf2",
+    "number": 23,
+    "name": "Catapult Zombie",
+    "text": "Of all the things Catapult Zombie could launch with this catapult, basketballs seemed like the best and most obvious choice.",
+    "toughness": "medium"
+  },
+  {
+    "description": "Gargantuar is a gigantic zombie.",
+    "_id": "8c3e7d19-ad3f-4d44-9974-2aae1bcc5212",
+    "number": 24,
+    "name": "Gargantuar",
+    "text": "When Gargantuar walks, the earth trembles. When he moans, other zombies fall silent. He is the zombie other zombies dream they could be. But he still can't find a girlfriend.",
+    "toughness": "extremely high"
+  },
+  {
+    "description": "Imps are tiny zombies huried by Gargantuar deep into your defenses.",
+    "_id": "38dd447a-0a63-4ff8-ab86-74afe25973e5",
+    "number": 25,
+    "name": "Imp",
+    "text": "Imp may be small, but he's wiry. He's proficient in zombie judo, zombie karate and zombie bare-knuckle brawling. He also plays the melodica.",
+    "toughness": "low"
+  },
+  {
+    "description": "Dr. Zomboss rules them all.",
+    "_id": "7a26fb33-8e44-4447-9bde-147c92393f1a",
+    "number": 26,
+    "name": "Dr. Zomboss",
+    "text": "Edgar George Zomboss achieved his Doctorate in Thanatology in oly two years. Quickly mastering thanatological technology, he built his fearsome Zombot and set about establishing absolute dominance of his local subdivision.",
+    "toughness": "extreme"
+  }
+]

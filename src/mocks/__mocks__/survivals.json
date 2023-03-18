@@ -1,0 +1,67 @@
+[
+  {
+    "_id": "cae59d45-1c82-42d2-862e-d7b102df0cd6",
+    "name": "Survival: Day",
+    "flags": 5,
+    "endless": false
+  },
+  {
+    "_id": "94ece3bf-fcfd-4a0f-a949-e4d0b527fdba",
+    "name": "Survival: Night",
+    "flags": 5,
+    "endless": false
+  },
+  {
+    "_id": "b8a55bd2-83b2-4047-a689-ab05f95ef064",
+    "name": "Survival: Pool",
+    "flags": 5,
+    "endless": false
+  },
+  {
+    "_id": "8ee30b39-049b-47e4-87b1-f6c3e5467fa6",
+    "name": "Survival: Fog",
+    "flags": 5,
+    "endless": false
+  },
+  {
+    "_id": "1aab3a0a-659d-433c-be7f-305d0659a424",
+    "name": "Survival: Roof",
+    "flags": 5,
+    "endless": false
+  },
+  {
+    "_id": "6ab34871-79f2-44a9-b31e-d912f648ab4c",
+    "name": "Survival: Day (Hard)",
+    "flags": 10,
+    "endless": false
+  },
+  {
+    "_id": "8459a8b9-2ddc-4ca2-b23a-592eee61efd4",
+    "name": "Survival: Night (Hard)",
+    "flags": 10,
+    "endless": false
+  },
+  {
+    "_id": "2352f26a-98ca-4193-94a7-e71c13605a67",
+    "name": "Survival: Pool (Hard)",
+    "flags": 10,
+    "endless": false
+  },
+  {
+    "_id": "fe6f4229-fd71-4283-964c-73cd333b45af",
+    "name": "Survival: Fog (Hard)",
+    "flags": 10,
+    "endless": false
+  },
+  {
+    "_id": "b929d0fb-bdf8-4235-b2e0-f4dad8a7bcb5",
+    "name": "Survival: Roof (Hard)",
+    "flags": 10,
+    "endless": false
+  },
+  {
+    "_id": "767589f1-1073-4e8d-846b-a72c55f02d7a",
+    "name": "Survival: Endless",
+    "endless": true
+  }
+]
