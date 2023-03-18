@@ -1,0 +1,13 @@
+.footer {
+    background: #191919;
+    display: block;
+    padding: 1.5rem;
+    text-align: center!important;
+}
+
+.footer__text {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.125;
+}

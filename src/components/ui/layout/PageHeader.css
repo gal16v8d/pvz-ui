@@ -1,0 +1,13 @@
+.header {
+    background: #191919;
+    display: block;
+    padding: 1.5rem;
+    text-align: center!important;
+}
+
+.title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.125;
+}

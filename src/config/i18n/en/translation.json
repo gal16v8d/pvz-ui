@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Plants Vs Zombies - Wiki"
+  },
+  "footer": {
+    "by": "by: ",
+    "licence": "The source code is licensed by:"
+  },
+  "menu": {
+    "achievement": "Achievements",
+    "garden": "Gardens",
+    "item": "Items",
+    "level": "Levels",
+    "minigame": "Minigames",
+    "plant": "Plants",
+    "puzzle": "Puzzles",
+    "survival": "Survivals",
+    "zombie": "Zombies"
+  }
+}

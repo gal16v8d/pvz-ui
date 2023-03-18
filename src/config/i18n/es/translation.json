@@ -1,0 +1,20 @@
+{
+  "header": {
+    "title": "Plantas Vs Zombies - Wiki"
+  },
+  "footer": {
+    "by": "por: ",
+    "licence": "Licencia del fuente:"
+  },
+  "menu": {
+    "achievement": "Logros",
+    "garden": "Jardines",
+    "item": "Objetos",
+    "level": "Niveles",
+    "minigame": "Minijuegos",
+    "plant": "Plantas",
+    "puzzle": "Rompecabezas",
+    "survival": "Supervivencia",
+    "zombie": "Zombies"
+  }
+}
