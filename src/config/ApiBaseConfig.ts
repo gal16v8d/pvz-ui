@@ -14,12 +14,17 @@ export const API_OBJECT = {
 
 export const ROW_OPTIONS = [10, 20, 50, 100];
 
+const DEFAULT_GRID_COL = 2;
+const BIG_GRID_COL = 5;
+
 const resolveGridColumns = (config: string) => {
   switch (config) {
     case API_OBJECT.MINIGAME:
-      return 5;
+      return BIG_GRID_COL;
+    case API_OBJECT.PUZZLE:
+      return BIG_GRID_COL;
     default:
-      return 2;
+      return DEFAULT_GRID_COL;
   }
 };
 
