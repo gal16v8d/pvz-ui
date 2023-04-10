@@ -1,4 +1,3 @@
-import { cardThemeBrown } from '../constants/theme';
 import ApiConfig from '../api/config/ApiConfig';
 
 export const API_OBJECT = {
