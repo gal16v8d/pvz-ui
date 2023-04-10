@@ -1,6 +1,7 @@
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Puzzle, PuzzleCategory } from '../../api/models';
+import { cardThemeGraySx } from '../../constants/theme';
 
 interface PuzzleCardProps {
   data: unknown;
@@ -18,30 +19,14 @@ const PuzzleCard: FC<PuzzleCardProps> = ({ data }) => {
   };
 
   return (
-    <Card
-      sx={{
-        backgroundColor: 'rgb(192,192,192)',
-        maxWidth: '350',
-        fontSize: '0.875rem',
-        fontWeight: '700',
-      }}
-    >
+    <Card sx={cardThemeGraySx.base}>
       <CardMedia
-        sx={{ height: 180, border: 'solid 2px rgb(192,192,192)' }}
+        sx={cardThemeGraySx.media}
         image={`/assets/puzzles/${getCardMedia(puzzle)}`}
         title={`puzzle-${puzzle._id}`}
       />
       <CardContent>
-        <Typography
-          sx={{
-            backgroundColor: 'rgb(211,211,211)',
-            typography: 'title',
-            border: 'solid 2px rgb(211,211,211)',
-            padding: '0.2rem',
-            color: 'rgb(75,104,184)',
-          }}
-          component={'div'}
-        >
+        <Typography sx={cardThemeGraySx.title} component={'div'}>
           {puzzle.name}
         </Typography>
         <Chip label={puzzle.category} color="primary" />

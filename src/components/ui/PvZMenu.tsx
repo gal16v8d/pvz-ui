@@ -13,6 +13,8 @@ import { FC, useState } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
 import { API_BASE_CONFIG } from '../../config/ApiBaseConfig';
 import { usePvZContext } from '../../provider/PvZProvider';
+import { PvZSwipeableAnchorType } from '../../types/anchor';
+import { menuTheme } from '../../constants/theme';
 
 const DEFAULT_ANCHOR = 'left';
 
@@ -27,8 +29,6 @@ const mapApiToMenu = (
     };
   });
 
-type SwipeableAnchorType = 'left' | 'right' | 'top' | 'bottom';
-
 const PvZMenu: FC = () => {
   const { t } = usePvZContext();
   const navigate = useNavigate();
@@ -36,36 +36,21 @@ const PvZMenu: FC = () => {
   const [anchorState, setAnchorState] = useState({ left: false });
 
   const toggleDrawer =
-    (anchor: SwipeableAnchorType, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event &&
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return;
-      }
-
+    (anchor: PvZSwipeableAnchorType, open: boolean) => () => {
       setAnchorState({ ...anchorState, [anchor]: open });
     };
 
-  const menuOptions = (anchor: SwipeableAnchorType) => (
+  const menuOptions = (anchor: PvZSwipeableAnchorType) => (
     <Box
-      sx={{
-        background: 'var(--gray-900)',
-        backgroundColor: 'var(--gray-900)',
-        color: '#fff',
-      }}
+      sx={menuTheme.body}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
         {options.map((option) => (
           <ListItem key={option.label} onClick={option.command}>
             <ListItemIcon>
-              <ArrowForward sx={{ color: '#fff' }} />
+              <ArrowForward sx={menuTheme.body} />
             </ListItemIcon>
             <ListItemText primary={option.label} />
           </ListItem>
@@ -75,23 +60,19 @@ const PvZMenu: FC = () => {
   );
 
   return (
-    <div>
+    <>
       <IconButton
         className="menuButton"
         aria-label="more"
         id="menu-button"
         aria-haspopup="true"
         onClick={toggleDrawer(DEFAULT_ANCHOR, true)}
-        sx={{
-          background: 'var(--primary-color)',
-          color: 'var(--primary-color-text)',
-          border: '1px solid var(--primary-color)',
-        }}
+        sx={menuTheme.button}
       >
         <FormatListBulleted />
       </IconButton>
       <SwipeableDrawer
-        sx={{ backgroundColor: '#fff0' }}
+        PaperProps={{ sx: menuTheme.drawer }}
         anchor={DEFAULT_ANCHOR}
         open={anchorState[DEFAULT_ANCHOR]}
         onClose={toggleDrawer(DEFAULT_ANCHOR, false)}
@@ -99,7 +80,7 @@ const PvZMenu: FC = () => {
       >
         {menuOptions(DEFAULT_ANCHOR)}
       </SwipeableDrawer>
-    </div>
+    </>
   );
 };
 

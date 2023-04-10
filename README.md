@@ -37,7 +37,7 @@ Generate all the models from swagger docs available in the backend services, it 
 ## List of cool technologies in use here
 
 - [Msw](https://mswjs.io/)
-- [Primereact](https://primereact.org/)
+- [MUI](https://mui.com/material-ui/)
 - [React](https://reactjs.org/)
 - [React-i18next](https://react.i18next.com/)
 - [React-Query](https://tanstack.com/query/v4/docs/react/adapters/react-query)

@@ -91,11 +91,11 @@
     "toughness": "medium"
   },
   {
-    "description": "These zombies appear in sets of four whenever Dancing ZOmbie rocks out.",
+    "description": "These zombies appear in sets of four whenever Dancing Zombie rocks out.",
     "_id": "0efe101c-02ce-48b5-8ace-61611872baec",
     "number": 10,
     "name": "Backup Dancer",
-    "text": "Backup Dancer Zombie spent six years perfecting his art at the CHewliard Performing Arts School in Zombie New York City.",
+    "text": "Backup Dancer Zombie spent six years perfecting his art at the Chewliard Performing Arts School in Zombie New York City.",
     "toughness": "low"
   },
   {
@@ -133,10 +133,11 @@
     "_id": "a41d0aaf-57ba-4a01-875a-8df753b822ba",
     "number": 14,
     "name": "Zombie Bobsled Team",
-    "text": "Zombie Bobsled Team worked hard to get where they are. They libe together, eat brains together and train together to become a cohesive zombie unit.",
+    "text": "Zombie Bobsled Team worked hard to get where they are. They live together, eat brains together and train together to become a cohesive zombie unit.",
     "toughness": "low"
   },
   {
+    "description": "Dolphin Rider Zombies use dolphins to exploit weakness in your pool defense.",
     "speed": ["fast", "slow"],
     "speed_notes": "fast, then slow (after jump)",
     "special": "jumps over the first plant he runs into",
@@ -148,6 +149,7 @@
     "toughness": "medium"
   },
   {
+    "description": "This zombie carries an explosive surprise",
     "speed": ["fast"],
     "special": "jack-in-the-box explodes",
     "weakness": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
@@ -158,6 +160,7 @@
     "toughness": "medium"
   },
   {
+    "description": "Balloon Zombie floats above the fray, inmune to most attacks.",
     "special": "flying",
     "weakness": [
       "64d9c98b-d307-4739-904d-fbc647d61782",
@@ -170,6 +173,7 @@
     "toughness": "low"
   },
   {
+    "description": "This zombie digs to bypass your defenses",
     "speed": ["fast", "slow"],
     "special": "tunnels underground and appears on the left side of the lawn.",
     "weakness": [
@@ -183,16 +187,14 @@
     "toughness": "medium"
   },
   {
+    "description": "Pogo Zombie hops to bypass your defenses",
     "speed": ["fast", "slow"],
-    "special": "tunnels underground and appears on the left side of the lawn.",
-    "weakness": [
-      "12ed5aac-5be9-4269-8869-4aed958b3c22",
-      "3947eef5-7f60-40e3-871e-048ae4c503d2"
-    ],
+    "special": "hops over plants",
+    "weakness": ["3947eef5-7f60-40e3-871e-048ae4c503d2"],
     "_id": "89e76e3f-795a-44a0-8be3-09058fc21da3",
     "number": 19,
     "name": "Pogo Zombie",
-    "text": "Digger Zombie spends three days a week getting his excavation permits in order.",
+    "text": "Sproing! Sproing! Sproing! That's the sound of a powerful and effective zombie doing what he does best.",
     "toughness": "medium"
   },
   {

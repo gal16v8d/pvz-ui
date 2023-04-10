@@ -1,9 +1,9 @@
-import { Box } from '@mui/material';
 import { FC } from 'react';
 import ApiConfig from '../../api/config/ApiConfig';
 import { get } from '../../api/services/CrudService';
 import { useGet } from '../../api/services/hooks/useGenericService';
-import { mapData } from './mapGridData';
+import GridWrapper from './GridWrapper';
+import { mapIndividualData, mapListData } from './mapGridData';
 
 interface ListingProps {
   apiObject: ApiConfig;
@@ -22,17 +22,15 @@ const Listing: FC<ListingProps> = ({ apiObject }) => {
   );
 
   return (
-    <div style={{ width: '100%' }}>
-      <Box
-        sx={{
-          display: 'grid',
-          gap: 1,
-          gridTemplateColumns: `repeat(${apiObject.gridColumns}, 1fr)`,
-        }}
-      >
-        {data?.map((d) => mapData(apiObject, d))}
-      </Box>
-    </div>
+    <GridWrapper
+      gridColumns={apiObject.gridColumns}
+      child={
+        <>
+          {data?.map((d) => mapIndividualData(apiObject, d))}
+          {mapListData(apiObject, data ?? [])}
+        </>
+      }
+    />
   );
 };
 

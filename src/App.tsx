@@ -2,6 +2,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { PvZProvider } from './provider/PvZProvider';
 import PvZRouter from './router/PvZRouter';
+import { ThemeProvider } from '@mui/material/styles';
+import { baseTheme } from './constants/theme';
 
 const App: React.FC = () => {
   console.log(`Running PVZ UI Version: ${import.meta.env.VITE_APP_VERSION}`);
@@ -21,12 +23,14 @@ const App: React.FC = () => {
       className="rootContainer"
       style={{ backgroundImage: `url(/assets/bg.png)` }}
     >
-      <QueryClientProvider client={queryClient}>
-        <PvZProvider>
-          <PvZRouter />
-        </PvZProvider>
-        {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
-      </QueryClientProvider>
+      <ThemeProvider theme={baseTheme}>
+        <QueryClientProvider client={queryClient}>
+          <PvZProvider>
+            <PvZRouter />
+          </PvZProvider>
+          {import.meta.env.DEV && <ReactQueryDevtools initialIsOpen={false} />}
+        </QueryClientProvider>
+      </ThemeProvider>
     </div>
   );
 };

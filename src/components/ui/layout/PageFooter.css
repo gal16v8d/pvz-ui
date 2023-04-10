@@ -1,12 +1,12 @@
 .footer {
-    background: #191919;
+    background: var(--gray-900);
     display: block;
     padding: 1.5rem;
     text-align: center!important;
 }
 
 .footer__text {
-    color: #fff;
+    color: var(--surface-900);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.125;

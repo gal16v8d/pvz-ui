@@ -1,3 +1,4 @@
+import { cardThemeBrown } from '../constants/theme';
 import ApiConfig from '../api/config/ApiConfig';
 
 export const API_OBJECT = {
@@ -23,6 +24,10 @@ const resolveGridColumns = (config: string) => {
       return BIG_GRID_COL;
     case API_OBJECT.PUZZLE:
       return BIG_GRID_COL;
+    case API_OBJECT.SURVIVAL:
+      return BIG_GRID_COL;
+    case API_OBJECT.ZOMBIE:
+      return 1;
     default:
       return DEFAULT_GRID_COL;
   }

@@ -5,12 +5,14 @@ import GardenCard from '../garden/GardenCard';
 import ItemCard from '../item/ItemCard';
 import MiniGameCard from '../minigame/MiniGameCard';
 import PuzzleCard from '../puzzle/PuzzleCard';
+import SurvivalCard from '../survival/SurvivalCard';
+import ZombieListing from '../zombie/ZombieListing';
 
 interface DataId {
   _id: string;
 }
 
-export const mapData = (apiObject: ApiConfig, data: unknown) => {
+export const mapIndividualData = (apiObject: ApiConfig, data: unknown) => {
   const key = (data as DataId)._id;
 
   switch (apiObject.name) {
@@ -24,6 +26,17 @@ export const mapData = (apiObject: ApiConfig, data: unknown) => {
       return <MiniGameCard key={key} data={data} />;
     case API_OBJECT.PUZZLE:
       return <PuzzleCard key={key} data={data} />;
+    case API_OBJECT.SURVIVAL:
+      return <SurvivalCard key={key} data={data} />;
+    default:
+      return undefined;
+  }
+};
+
+export const mapListData = (apiObject: ApiConfig, data: unknown[]) => {
+  switch (apiObject.name) {
+    case API_OBJECT.ZOMBIE:
+      return <ZombieListing data={data} />;
     default:
       return undefined;
   }

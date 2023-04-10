@@ -14,7 +14,13 @@ const PvZProvider = (
   const { t } = useTranslation();
 
   return (
-    <PvZContext.Provider value={{ t }}>{props.children}</PvZContext.Provider>
+    <PvZContext.Provider
+      value={{
+        t,
+      }}
+    >
+      {props.children}
+    </PvZContext.Provider>
   );
 };
 

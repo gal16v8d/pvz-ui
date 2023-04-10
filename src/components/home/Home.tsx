@@ -1,18 +1,12 @@
 import { Card, CardMedia } from '@mui/material';
 import { FC } from 'react';
+import { homeTheme } from '../../constants/theme';
 
 const Home: FC = () => {
   return (
-    <Card
-      sx={{
-        backgroundColor: 'rgb(102,51,0)',
-        maxWidth: '350',
-        fontSize: '0.875rem',
-        fontWeight: '700',
-      }}
-    >
+    <Card sx={homeTheme.body}>
       <CardMedia
-        sx={{ height: 500 }}
+        sx={homeTheme.media}
         image={'/assets/home/pvz.png'}
         title={'logo'}
       />
