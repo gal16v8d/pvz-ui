@@ -44,10 +44,17 @@
     --focus-ring: 0 0 0 0.1rem white;
     --card-title-text-1: rgb(0,128,0);
     --card-title-text-2: rgb(75,104,184);
+    --card-title-text-3: yellow;
     --card-bg-1: rgb(102,51,0);
     --card-bg-2: rgb(192,192,192);
+    --card-bg-3: rgb(250,214,165);
     --card-title-bg-2: rgb(211,211,211);
     --card-border-2: rgb(47,79,79);
+    --card-border-3: rgb(160,82,45);
+    --card-description-font: rgb(0,0,80);
+    --card-text-font: rgb(165,42,42);
+    --card-text-value-font: red;
+    --card-constraint-water-font: cyan;
     color-scheme: dark;
 }
 

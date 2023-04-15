@@ -14,6 +14,7 @@ export const API_OBJECT = {
 
 export const ROW_OPTIONS = [10, 20, 50, 100];
 
+const EXTEND_GRID_COL = 1;
 const DEFAULT_GRID_COL = 2;
 const BIG_GRID_COL = 5;
 
@@ -21,12 +22,14 @@ const resolveGridColumns = (config: string) => {
   switch (config) {
     case API_OBJECT.MINIGAME:
       return BIG_GRID_COL;
+    case API_OBJECT.PLANT:
+      return EXTEND_GRID_COL;
     case API_OBJECT.PUZZLE:
       return BIG_GRID_COL;
     case API_OBJECT.SURVIVAL:
       return BIG_GRID_COL;
     case API_OBJECT.ZOMBIE:
-      return 1;
+      return EXTEND_GRID_COL;
     default:
       return DEFAULT_GRID_COL;
   }

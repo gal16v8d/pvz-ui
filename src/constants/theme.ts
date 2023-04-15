@@ -52,26 +52,73 @@ const cardThemeGraySx = {
   },
 };
 
-const cardThemeZombieSx = {
+const cardThemePlantSx = {
   base: {
-    backgroundColor: 'var(--card-bg-2)',
-    borderColor: 'var(--card-border-2)',
+    backgroundColor: 'var(--card-bg-3)',
+    borderColor: 'var(--card-border-3)',
     borderStyle: 'solid',
-    borderWidth: '0.5rem',
+    borderWidth: '3rem',
     ...baseFontProps,
   },
   constraint: {
     typography: 'body1',
     margin: '1px',
-    color: 'cyan',
+    color: 'var(--card-constraint-water-font)',
   },
   description: {
     typography: 'body1',
     margin: '1px',
-    color: 'rgb(0,0,80)',
+    color: 'var(--card-description-font)',
   },
   key: {
-    color: 'rgb(165,42,42)',
+    color: 'var(--card-text-font)',
+    margin: '1px',
+    typography: 'body1',
+  },
+  media: {
+    objectFit: 'contain',
+    border: 'solid 2px var(--card-bg-3)',
+  },
+  text: {
+    typography: 'body1',
+    margin: '1px',
+    color: 'var(--card-text-font)',
+  },
+  title: {
+    backgroundColor: 'var(--card-border-3)',
+    color: 'var(--card-title-text-3)',
+    margin: '1px',
+    textAlign: 'center',
+    textTransform: 'uppercase',
+    typography: 'h4',
+  },
+  value: {
+    typography: 'body1',
+    margin: '1px',
+    color: 'var(--card-text-value-font)',
+  },
+};
+
+const cardThemeZombieSx = {
+  base: {
+    backgroundColor: 'var(--card-bg-2)',
+    borderColor: 'var(--card-border-2)',
+    borderStyle: 'solid',
+    borderWidth: '3rem',
+    ...baseFontProps,
+  },
+  constraint: {
+    typography: 'body1',
+    margin: '1px',
+    color: 'var(--card-constraint-water-font)',
+  },
+  description: {
+    typography: 'body1',
+    margin: '1px',
+    color: 'var(--card-description-font)',
+  },
+  key: {
+    color: 'var(--card-text-font)',
     margin: '1px',
     typography: 'body1',
   },
@@ -82,7 +129,7 @@ const cardThemeZombieSx = {
   text: {
     typography: 'body1',
     margin: '1px',
-    color: 'rgb(165,42,42)',
+    color: 'var(--card-text-font)',
   },
   title: {
     backgroundColor: 'var(--card-border-2)',
@@ -95,7 +142,7 @@ const cardThemeZombieSx = {
   value: {
     typography: 'body1',
     margin: '1px',
-    color: 'red',
+    color: 'var(--card-text-value-font)',
   },
 };
 
@@ -127,6 +174,7 @@ export {
   baseTheme,
   cardThemeBrownSx,
   cardThemeGraySx,
+  cardThemePlantSx,
   cardThemeZombieSx,
   homeTheme,
   menuTheme,

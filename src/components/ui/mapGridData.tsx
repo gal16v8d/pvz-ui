@@ -4,6 +4,7 @@ import AchievementCard from '../achievement/AchievementCard';
 import GardenCard from '../garden/GardenCard';
 import ItemCard from '../item/ItemCard';
 import MiniGameCard from '../minigame/MiniGameCard';
+import PlantListing from '../plant/PlantListing';
 import PuzzleCard from '../puzzle/PuzzleCard';
 import SurvivalCard from '../survival/SurvivalCard';
 import ZombieListing from '../zombie/ZombieListing';
@@ -35,6 +36,8 @@ export const mapIndividualData = (apiObject: ApiConfig, data: unknown) => {
 
 export const mapListData = (apiObject: ApiConfig, data: unknown[]) => {
   switch (apiObject.name) {
+    case API_OBJECT.PLANT:
+      return <PlantListing data={data} />;
     case API_OBJECT.ZOMBIE:
       return <ZombieListing data={data} />;
     default:
