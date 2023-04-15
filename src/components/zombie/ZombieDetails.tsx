@@ -1,11 +1,17 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  CircularProgress,
+  Typography,
+} from '@mui/material';
+import { Plant } from '../../api/models';
 import { get } from '../../api/services/CrudService';
 import { useGet } from '../../api/services/hooks/useGenericService';
 import { API_BASE_CONFIG, API_OBJECT } from '../../config/ApiBaseConfig';
-import GridWrapper from '../ui/GridWrapper';
-import { useZombieContext } from './ZombieProvider';
-import { Plant } from '../../api/models';
 import { cardThemeZombieSx } from '../../constants/theme';
+import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
+import { useZombieContext } from './ZombieProvider';
 
 const ZombieDetails = () => {
   const { zombie } = useZombieContext();
@@ -23,24 +29,19 @@ const ZombieDetails = () => {
     }
   );
 
+  if (!plants) {
+    return <CircularProgress />;
+  }
+
   if (!zombie) {
     return null;
   }
 
   const keyValueText = (data: unknown, param: string): JSX.Element | null =>
-    data ? (
-      <GridWrapper
-        gridColumns={2}
-        child={
-          <>
-            <Typography sx={cardThemeZombieSx.key}>{`${param}:`}</Typography>
-            <Typography sx={cardThemeZombieSx.value}>
-              {data as string}
-            </Typography>
-          </>
-        }
-      />
-    ) : null;
+    gridKeyValueText(data, param, {
+      key: cardThemeZombieSx.key,
+      value: cardThemeZombieSx.value,
+    });
 
   const transformWeakness = (weakness: string[] | undefined) => {
     if (weakness) {

@@ -1,6 +1,12 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  CircularProgress,
+  Typography,
+} from '@mui/material';
 import { cardThemePlantSx } from '../../constants/theme';
-import GridWrapper from '../ui/GridWrapper';
+import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantProvider';
 
 const PlantDetails = () => {
@@ -11,19 +17,10 @@ const PlantDetails = () => {
   }
 
   const keyValueText = (data: unknown, param: string): JSX.Element | null =>
-    data ? (
-      <GridWrapper
-        gridColumns={2}
-        child={
-          <>
-            <Typography sx={cardThemePlantSx.key}>{`${param}:`}</Typography>
-            <Typography sx={cardThemePlantSx.value}>
-              {data as string}
-            </Typography>
-          </>
-        }
-      />
-    ) : null;
+    gridKeyValueText(data, param, {
+      key: cardThemePlantSx.key,
+      value: cardThemePlantSx.value,
+    });
 
   return (
     <Card sx={cardThemePlantSx.base}>

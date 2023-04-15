@@ -1,13 +1,14 @@
-import ApiConfig from '../../api/config/ApiConfig';
-import { API_OBJECT } from '../../config/ApiBaseConfig';
-import AchievementCard from '../achievement/AchievementCard';
-import GardenCard from '../garden/GardenCard';
-import ItemCard from '../item/ItemCard';
-import MiniGameCard from '../minigame/MiniGameCard';
-import PlantListing from '../plant/PlantListing';
-import PuzzleCard from '../puzzle/PuzzleCard';
-import SurvivalCard from '../survival/SurvivalCard';
-import ZombieListing from '../zombie/ZombieListing';
+import ApiConfig from '../../../api/config/ApiConfig';
+import { API_OBJECT } from '../../../config/ApiBaseConfig';
+import AchievementCard from '../../achievement/AchievementCard';
+import GardenCard from '../../garden/GardenCard';
+import ItemCard from '../../item/ItemCard';
+import LevelCard from '../../level/LevelCard';
+import MiniGameCard from '../../minigame/MiniGameCard';
+import PlantListing from '../../plant/PlantListing';
+import PuzzleCard from '../../puzzle/PuzzleCard';
+import SurvivalCard from '../../survival/SurvivalCard';
+import ZombieListing from '../../zombie/ZombieListing';
 
 interface DataId {
   _id: string;
@@ -23,6 +24,8 @@ export const mapIndividualData = (apiObject: ApiConfig, data: unknown) => {
       return <GardenCard key={key} data={data} />;
     case API_OBJECT.ITEM:
       return <ItemCard key={key} data={data} />;
+    case API_OBJECT.LEVEL:
+      return <LevelCard key={key} data={data} />;
     case API_OBJECT.MINIGAME:
       return <MiniGameCard key={key} data={data} />;
     case API_OBJECT.PUZZLE:
