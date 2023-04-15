@@ -27,6 +27,10 @@ const cardThemeBrownSx = {
     color: 'white',
     typography: 'body1',
   },
+  media: {
+    height: '100px',
+    width: '100px',
+  },
   title: {
     color: 'var(--card-title-text-1)',
     textTransform: 'uppercase',
