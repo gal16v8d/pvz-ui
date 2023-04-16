@@ -1,5 +1,5 @@
+import { Plant } from '@/api/models';
 import React, { Dispatch, SetStateAction, useState } from 'react';
-import { Plant } from '../../api/models';
 
 interface PlantContextProps {
   plant: Plant | undefined;

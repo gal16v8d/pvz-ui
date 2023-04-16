@@ -1,7 +1,7 @@
-import { Box, Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Achievement } from '@/api/models';
+import { cardThemeBrownSx } from '@/constants/theme';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FC } from 'react';
-import { cardThemeBrownSx } from '../../constants/theme';
-import { Achievement } from '../../api/models';
 import GridWrapper from '../ui/GridWrapper';
 
 interface AchievementCardProps {

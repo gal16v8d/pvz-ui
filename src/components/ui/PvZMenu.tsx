@@ -1,3 +1,7 @@
+import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
+import { menuTheme } from '@/constants/theme';
+import { usePvZContext } from '@/provider/PvZProvider';
+import { PvZSwipeableAnchorType } from '@/types/anchor';
 import { ArrowForward, FormatListBulleted } from '@mui/icons-material';
 import {
   Box,
@@ -11,10 +15,6 @@ import {
 import { TFunction } from 'i18next';
 import { FC, useState } from 'react';
 import { NavigateFunction, useNavigate } from 'react-router-dom';
-import { API_BASE_CONFIG } from '../../config/ApiBaseConfig';
-import { usePvZContext } from '../../provider/PvZProvider';
-import { PvZSwipeableAnchorType } from '../../types/anchor';
-import { menuTheme } from '../../constants/theme';
 
 const DEFAULT_ANCHOR = 'left';
 

@@ -1,4 +1,4 @@
-import ApiError from '../../responses/ApiError';
+import ApiError from '@/api/responses/ApiError';
 import {
   useMutation,
   UseMutationResult,

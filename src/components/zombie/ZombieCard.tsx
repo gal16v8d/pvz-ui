@@ -1,8 +1,8 @@
+import { Zombie } from '@/api/models';
+import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardActionArea, CardMedia } from '@mui/material';
 import { FC } from 'react';
-import { Zombie } from '../../api/models';
 import { useZombieContext } from './ZombieProvider';
-import { cardThemeGraySx } from '../../constants/theme';
 
 interface ZombieCardProps {
   data: unknown;

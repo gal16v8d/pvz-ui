@@ -1,5 +1,5 @@
+import { Zombie } from '@/api/models';
 import React, { Dispatch, SetStateAction, useState } from 'react';
-import { Zombie } from '../../api/models';
 
 interface ZombieContextProps {
   zombie: Zombie | undefined;

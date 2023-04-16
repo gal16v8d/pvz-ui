@@ -1,15 +1,15 @@
-import ApiConfig from '../../../api/config/ApiConfig';
-import { API_OBJECT } from '../../../config/ApiBaseConfig';
-import DataId from '../../../types/DataId';
-import AchievementCard from '../../achievement/AchievementCard';
-import GardenCard from '../../garden/GardenCard';
-import ItemCard from '../../item/ItemCard';
-import LevelCard from '../../level/LevelCard';
-import MiniGameCard from '../../minigame/MiniGameCard';
-import PlantListing from '../../plant/PlantListing';
-import PuzzleCard from '../../puzzle/PuzzleCard';
-import SurvivalCard from '../../survival/SurvivalCard';
-import ZombieListing from '../../zombie/ZombieListing';
+import ApiConfig from '@/api/config/ApiConfig';
+import AchievementCard from '@/components/achievement/AchievementCard';
+import GardenCard from '@/components/garden/GardenCard';
+import ItemCard from '@/components/item/ItemCard';
+import LevelCard from '@/components/level/LevelCard';
+import MiniGameCard from '@/components/minigame/MiniGameCard';
+import PlantListing from '@/components/plant/PlantListing';
+import PuzzleCard from '@/components/puzzle/PuzzleCard';
+import SurvivalCard from '@/components/survival/SurvivalCard';
+import ZombieListing from '@/components/zombie/ZombieListing';
+import { API_OBJECT } from '@/config/ApiBaseConfig';
+import DataId from '@/types/DataId';
 
 export const mapIndividualData = (
   apiObject: ApiConfig,

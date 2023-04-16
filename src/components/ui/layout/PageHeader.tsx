@@ -1,4 +1,4 @@
-import { usePvZContext } from '../../../provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZProvider';
 import './PageHeader.css';
 
 const PageHeader = (): JSX.Element => {

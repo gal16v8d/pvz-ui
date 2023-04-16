@@ -1,5 +1,5 @@
+import DataId from '@/types/DataId';
 import { FC } from 'react';
-import DataId from '../../types/DataId';
 import GridWrapper from '../ui/GridWrapper';
 import ZombieCard from './ZombieCard';
 import ZombieDetails from './ZombieDetails';

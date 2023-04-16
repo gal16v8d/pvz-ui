@@ -1,8 +1,8 @@
+import { Puzzle, PuzzleCategory } from '@/api/models';
+import { cardThemeGraySx } from '@/constants/theme';
+import { usePvZContext } from '@/provider/PvZProvider';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
-import { Puzzle, PuzzleCategory } from '../../api/models';
-import { cardThemeGraySx } from '../../constants/theme';
-import { usePvZContext } from '../../provider/PvZProvider';
 
 interface PuzzleCardProps {
   data: unknown;

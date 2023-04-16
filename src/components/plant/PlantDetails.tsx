@@ -1,3 +1,6 @@
+import { ARR_JOINER } from '@/constants/constants';
+import { cardThemePlantSx } from '@/constants/theme';
+import { usePvZContext } from '@/provider/PvZProvider';
 import {
   Card,
   CardContent,
@@ -5,11 +8,8 @@ import {
   SxProps,
   Typography,
 } from '@mui/material';
-import { ARR_JOINER } from '../../constants/constants';
-import { cardThemePlantSx } from '../../constants/theme';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantProvider';
-import { usePvZContext } from '../../provider/PvZProvider';
 
 const PlantDetails = (): JSX.Element | null => {
   const { t } = usePvZContext();

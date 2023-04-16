@@ -1,4 +1,4 @@
-import ApiConfig from '../api/config/ApiConfig';
+import ApiConfig from '@/api/config/ApiConfig';
 
 export const API_OBJECT = {
   ACHIEVEMENT: 'achievement',

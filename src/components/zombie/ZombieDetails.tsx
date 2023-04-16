@@ -1,3 +1,10 @@
+import { Plant } from '@/api/models';
+import { get } from '@/api/services/CrudService';
+import { useGet } from '@/api/services/hooks/useGenericService';
+import { API_BASE_CONFIG, API_OBJECT } from '@/config/ApiBaseConfig';
+import { ARR_JOINER } from '@/constants/constants';
+import { cardThemeZombieSx } from '@/constants/theme';
+import { usePvZContext } from '@/provider/PvZProvider';
 import {
   Card,
   CardContent,
@@ -5,15 +12,8 @@ import {
   CircularProgress,
   Typography,
 } from '@mui/material';
-import { Plant } from '../../api/models';
-import { get } from '../../api/services/CrudService';
-import { useGet } from '../../api/services/hooks/useGenericService';
-import { API_BASE_CONFIG, API_OBJECT } from '../../config/ApiBaseConfig';
-import { cardThemeZombieSx } from '../../constants/theme';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { useZombieContext } from './ZombieProvider';
-import { ARR_JOINER } from '../../constants/constants';
-import { usePvZContext } from '../../provider/PvZProvider';
 
 const ZombieDetails = (): JSX.Element | null => {
   const { t } = usePvZContext();

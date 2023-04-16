@@ -1,9 +1,9 @@
+import { Plant } from '@/api/models';
 import { FC } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 import PlantCard from './PlantCard';
 import PlantDetails from './PlantDetails';
 import { PlantProvider } from './PlantProvider';
-import { Plant } from '../../api/models';
 
 interface PlantListingProps {
   data: unknown[];

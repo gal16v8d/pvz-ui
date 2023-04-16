@@ -1,8 +1,8 @@
+import { Survival } from '@/api/models';
+import { cardThemeGraySx } from '@/constants/theme';
+import { usePvZContext } from '@/provider/PvZProvider';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
-import { cardThemeGraySx } from '../../constants/theme';
-import { Survival } from '../../api/models';
-import { usePvZContext } from '../../provider/PvZProvider';
 
 interface SurvivalCardProps {
   data: unknown;
