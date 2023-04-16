@@ -1,4 +1,37 @@
 {
+  "components": {
+    "garden": {
+      "coin_helper": "Ayudante",
+      "max_plants": "Plantas máximas"
+    },
+    "level": {
+      "level": "Nivel",
+      "minigame": "Minijuego",
+      "unlock": "Desbloquea"
+    },
+    "plant": {
+      "damage": "Daño",
+      "firing_spd": "Velocidad disparo",
+      "range": "Rango",
+      "special": "Especial",
+      "sun_prod": "Producción de sol",
+      "toughness": "Dureza",
+      "usage": "Uso"
+    },
+    "puzzle": {
+      "streak": "Racha"
+    },
+    "survival": {
+      "endless": "Infinito",
+      "flags": "Banderas"
+    },
+    "zombie": {
+      "special": "Especial",
+      "speed": "Velocidad",
+      "toughness": "Dureza",
+      "weakness": "Debilidad"
+    }
+  },
   "header": {
     "title": "Plantas Vs Zombies - Wiki"
   },

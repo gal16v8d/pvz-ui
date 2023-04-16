@@ -1,15 +1,12 @@
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  CircularProgress,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { ARR_JOINER } from '../../constants/constants';
 import { cardThemePlantSx } from '../../constants/theme';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantProvider';
+import { usePvZContext } from '../../provider/PvZProvider';
 
 const PlantDetails = () => {
+  const { t } = usePvZContext();
   const { plant } = usePlantContext();
 
   if (!plant) {
@@ -35,19 +32,28 @@ const PlantDetails = () => {
         <Typography sx={cardThemePlantSx.description}>
           {plant.description}
         </Typography>
-        {keyValueText(plant?.production?.join(','), 'Sun production')}
-        {keyValueText(plant?.toughness, 'Toughness')}
+        {keyValueText(
+          plant?.production?.join(ARR_JOINER),
+          t('components.plant.sun_prod')
+        )}
+        {keyValueText(plant?.toughness, t('components.plant.toughness'))}
         {plant?.damage &&
           !plant?.damage_notes &&
-          keyValueText(plant?.damage.join(','), 'Damage')}
-        {keyValueText(plant?.damage_notes, 'Damage')}
-        {keyValueText(plant?.range, 'Range')}
-        {keyValueText(plant?.firing_speed, 'Firing Speed')}
-        {keyValueText(plant?.usage?.join(','), 'Usage')}
-        {keyValueText(plant?.special, 'Special')}
+          keyValueText(
+            plant?.damage.join(ARR_JOINER),
+            t('components.plant.damage')
+          )}
+        {keyValueText(plant?.damage_notes, t('components.plant.damage'))}
+        {keyValueText(plant?.range, t('components.plant.range'))}
+        {keyValueText(plant?.firing_speed, t('components.plant.firing_spd'))}
+        {keyValueText(
+          plant?.usage?.join(ARR_JOINER),
+          t('components.plant.usage')
+        )}
+        {keyValueText(plant?.special, t('components.plant.special'))}
         {plant?.constraint && (
           <Typography sx={cardThemePlantSx.constraint}>
-            {plant?.constraint.join(',')}
+            {plant?.constraint.join(ARR_JOINER)}
           </Typography>
         )}
         <Typography sx={cardThemePlantSx.text}>{plant.text}</Typography>

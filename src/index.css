@@ -42,19 +42,24 @@
     --surface-hover:#4c4c4c;
     --maskbg: rgba(0, 0, 0, 0.4);
     --focus-ring: 0 0 0 0.1rem white;
-    --card-title-text-1: rgb(0,128,0);
-    --card-title-text-2: rgb(75,104,184);
-    --card-title-text-3: yellow;
-    --card-bg-1: rgb(102,51,0);
-    --card-bg-2: rgb(192,192,192);
-    --card-bg-3: rgb(250,214,165);
-    --card-title-bg-2: rgb(211,211,211);
-    --card-border-2: rgb(47,79,79);
-    --card-border-3: rgb(160,82,45);
-    --card-description-font: rgb(0,0,80);
-    --card-text-font: rgb(165,42,42);
-    --card-text-value-font: red;
-    --card-constraint-water-font: cyan;
+
+    --card-common-background: rgb(77, 57, 38);
+    --card-common-text: rgb(255,255,255);
+    --card-common-title: rgb(2,186,2);
+    --card-description-font: rgb(3, 3, 112);
+    --card-text-font: rgb(133, 47, 16);
+    --card-text-value-font: rgb(255,0,0);
+    --card-constraint-water-font: rgb(15,161,218);
+    --card-extras-background: rgb(194,192,193);
+    --card-extras-border: rgb(154,154,154);
+    --card-plant-background: rgb(253,199,136);
+    --card-plant-media-border: rgb(94,41,13);
+    --card-plant-border: rgb(142,66,27);
+    --card-plant-title: rgb(177,165,33);
+    --card-zombie-background: rgb(185,170,200);
+    --card-zombie-media-border: rgb(46,62,26);
+    --card-zombie-border: rgb(88,86,103);
+    --card-zombie-title: var(--card-common-title);
     color-scheme: dark;
 }
 

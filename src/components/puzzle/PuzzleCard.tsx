@@ -2,12 +2,14 @@ import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
 import { Puzzle, PuzzleCategory } from '../../api/models';
 import { cardThemeGraySx } from '../../constants/theme';
+import { usePvZContext } from '../../provider/PvZProvider';
 
 interface PuzzleCardProps {
   data: unknown;
 }
 
 const PuzzleCard: FC<PuzzleCardProps> = ({ data }) => {
+  const { t } = usePvZContext();
   const puzzle = data as Puzzle;
 
   const getCardMedia = (puzzle: Puzzle) => {
@@ -30,7 +32,9 @@ const PuzzleCard: FC<PuzzleCardProps> = ({ data }) => {
           {puzzle.name}
         </Typography>
         <Chip label={puzzle.category} color="primary" />
-        {puzzle.with_streak && <Chip label={'Streak'} color="primary" />}
+        {puzzle.with_streak && (
+          <Chip label={t('components.puzzle.streak')} color="primary" />
+        )}
       </CardContent>
     </Card>
   );

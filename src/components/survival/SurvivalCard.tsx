@@ -2,12 +2,14 @@ import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
 import { cardThemeGraySx } from '../../constants/theme';
 import { Survival } from '../../api/models';
+import { usePvZContext } from '../../provider/PvZProvider';
 
 interface SurvivalCardProps {
   data: unknown;
 }
 
 const SurvivalCard: FC<SurvivalCardProps> = ({ data }) => {
+  const { t } = usePvZContext();
   const survival = data as Survival;
 
   const mapText = (input: string) => (
@@ -26,9 +28,11 @@ const SurvivalCard: FC<SurvivalCardProps> = ({ data }) => {
       <CardContent>
         {mapText(survival.name)}
         {survival.endless ? (
-          <Chip label={'Endless'} color="primary" />
+          <Chip label={t('components.survival.endless')} color="primary" />
         ) : (
-          mapText(`Flags: ${String(survival.flags)}`)
+          mapText(
+            `${t('components.survival.flags')}: ${String(survival.flags)}`
+          )
         )}
       </CardContent>
     </Card>

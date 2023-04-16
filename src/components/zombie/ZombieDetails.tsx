@@ -12,8 +12,11 @@ import { API_BASE_CONFIG, API_OBJECT } from '../../config/ApiBaseConfig';
 import { cardThemeZombieSx } from '../../constants/theme';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { useZombieContext } from './ZombieProvider';
+import { ARR_JOINER } from '../../constants/constants';
+import { usePvZContext } from '../../provider/PvZProvider';
 
 const ZombieDetails = () => {
+  const { t } = usePvZContext();
   const { zombie } = useZombieContext();
   const plantConfig = API_BASE_CONFIG.filter(
     (v) => v.name === API_OBJECT.PLANT
@@ -43,15 +46,24 @@ const ZombieDetails = () => {
       value: cardThemeZombieSx.value,
     });
 
-  const transformWeakness = (weakness: string[] | undefined) => {
+  const transformWeakness = (
+    weakness: string[] | undefined
+  ): string | undefined => {
     if (weakness) {
-      const plantObjects = plants as Plant[];
-      const filteredPlants = plantObjects
+      const plantsArr = plants as Plant[];
+      const filteredPlants = plantsArr
         ?.filter((plant) => weakness.includes(plant?._id || ''))
         .map((plant) => plant.name);
-      return filteredPlants.join(',');
+      return filteredPlants.join(ARR_JOINER);
     }
     return undefined;
+  };
+
+  const transformExtraToughness = (toughnessKey: string) => {
+    return toughnessKey
+      .split('_')
+      .map((value) => value.charAt(0).toUpperCase() + value.slice(1))
+      .join(' ');
   };
 
   return (
@@ -69,14 +81,20 @@ const ZombieDetails = () => {
             {zombie?.description}
           </Typography>
         )}
-        {keyValueText(zombie?.toughness, 'Toughness')}
+        {keyValueText(zombie?.toughness, t('components.zombie.toughness'))}
         {zombie?.toughness_notes &&
           Object.entries(zombie?.toughness_notes).map(([k, v]) =>
-            keyValueText(v, k)
+            keyValueText(v, transformExtraToughness(k))
           )}
-        {keyValueText(zombie?.speed_notes ?? zombie?.speed, 'Speed')}
-        {keyValueText(zombie?.special, 'Special')}
-        {keyValueText(transformWeakness(zombie?.weakness), 'Weakness')}
+        {keyValueText(
+          zombie?.speed_notes ?? zombie?.speed,
+          t('components.zombie.speed')
+        )}
+        {keyValueText(zombie?.special, t('components.zombie.special'))}
+        {keyValueText(
+          transformWeakness(zombie?.weakness),
+          t('components.zombie.weakness')
+        )}
         {zombie?.constraint && (
           <Typography sx={cardThemeZombieSx.constraint}>
             {zombie?.constraint}

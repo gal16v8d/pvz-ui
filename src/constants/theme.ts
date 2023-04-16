@@ -20,11 +20,11 @@ const baseCardProps = {
 
 const cardThemeBrownSx = {
   base: {
-    backgroundColor: 'var(--card-bg-1)',
+    backgroundColor: 'var(--card-common-background)',
     ...baseCardProps,
   },
   body: {
-    color: 'white',
+    color: 'var(--card-common-text)',
     typography: 'body1',
   },
   media: {
@@ -32,7 +32,7 @@ const cardThemeBrownSx = {
     width: '100px',
   },
   title: {
-    color: 'var(--card-title-text-1)',
+    color: 'var(--card-common-title)',
     textTransform: 'uppercase',
     typography: 'title',
     margin: '5px',
@@ -41,25 +41,30 @@ const cardThemeBrownSx = {
 
 const cardThemeGraySx = {
   base: {
-    backgroundColor: 'var(--card-bg-2)',
+    backgroundColor: 'var(--card-extras-border)',
     ...baseCardProps,
   },
   media: {
     height: 180,
-    border: 'solid 2px var(--card-bg-2)',
+    border: 'solid 2px var(--card-extras-border)',
   },
   title: {
-    backgroundColor: 'var(--card-title-bg-2)',
-    color: 'var(--card-title-text-2)',
+    backgroundColor: 'var(--card-extras-background)',
+    color: 'var(--card-description-font)',
     typography: 'title',
     margin: '5px',
   },
 };
 
-const cardThemePlantSx = {
+const listingAndDetailSx = (
+  backgroundColor: string,
+  borderColor: string,
+  mediaBorderColor: string,
+  titleColor: string
+) => ({
   base: {
-    backgroundColor: 'var(--card-bg-3)',
-    borderColor: 'var(--card-border-3)',
+    backgroundColor: backgroundColor,
+    borderColor: borderColor,
     borderStyle: 'solid',
     borderWidth: '3rem',
     ...baseFontProps,
@@ -81,7 +86,9 @@ const cardThemePlantSx = {
   },
   media: {
     objectFit: 'contain',
-    border: 'solid 2px var(--card-bg-3)',
+    borderColor: mediaBorderColor,
+    borderStyle: 'solid',
+    borderWidth: '3rem',
   },
   text: {
     typography: 'body1',
@@ -89,8 +96,8 @@ const cardThemePlantSx = {
     color: 'var(--card-text-font)',
   },
   title: {
-    backgroundColor: 'var(--card-border-3)',
-    color: 'var(--card-title-text-3)',
+    backgroundColor: borderColor,
+    color: titleColor,
     margin: '1px',
     textAlign: 'center',
     textTransform: 'uppercase',
@@ -101,58 +108,25 @@ const cardThemePlantSx = {
     margin: '1px',
     color: 'var(--card-text-value-font)',
   },
-};
+});
 
-const cardThemeZombieSx = {
-  base: {
-    backgroundColor: 'var(--card-bg-2)',
-    borderColor: 'var(--card-border-2)',
-    borderStyle: 'solid',
-    borderWidth: '3rem',
-    ...baseFontProps,
-  },
-  constraint: {
-    typography: 'body1',
-    margin: '1px',
-    color: 'var(--card-constraint-water-font)',
-  },
-  description: {
-    typography: 'body1',
-    margin: '1px',
-    color: 'var(--card-description-font)',
-  },
-  key: {
-    color: 'var(--card-text-font)',
-    margin: '1px',
-    typography: 'body1',
-  },
-  media: {
-    objectFit: 'contain',
-    border: 'solid 2px var(--card-bg-2)',
-  },
-  text: {
-    typography: 'body1',
-    margin: '1px',
-    color: 'var(--card-text-font)',
-  },
-  title: {
-    backgroundColor: 'var(--card-border-2)',
-    color: 'var(--card-title-text-1)',
-    margin: '1px',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-    typography: 'h4',
-  },
-  value: {
-    typography: 'body1',
-    margin: '1px',
-    color: 'var(--card-text-value-font)',
-  },
-};
+const cardThemePlantSx = listingAndDetailSx(
+  'var(--card-plant-background)',
+  'var(--card-plant-border)',
+  'var(--card-plant-media-border)',
+  'var(--card-plant-title)'
+);
+
+const cardThemeZombieSx = listingAndDetailSx(
+  'var(--card-zombie-background)',
+  'var(--card-zombie-border)',
+  'var(--card-zombie-media-border)',
+  'var(--card-zombie-title)'
+);
 
 const homeTheme = {
   body: {
-    backgroundColor: 'rgb(102,51,0)',
+    backgroundColor: 'var(--card-common-background)',
     ...baseCardProps,
   },
   media: { height: 500 },
