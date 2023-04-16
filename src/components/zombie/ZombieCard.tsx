@@ -8,7 +8,7 @@ interface ZombieCardProps {
   data: unknown;
 }
 
-const ZombieCard: FC<ZombieCardProps> = ({ data }) => {
+const ZombieCard: FC<ZombieCardProps> = ({ data }): JSX.Element => {
   const { setZombie } = useZombieContext();
   const zombie = data as Zombie;
 

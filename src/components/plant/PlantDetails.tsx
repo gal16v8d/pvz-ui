@@ -1,11 +1,17 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  SxProps,
+  Typography,
+} from '@mui/material';
 import { ARR_JOINER } from '../../constants/constants';
 import { cardThemePlantSx } from '../../constants/theme';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantProvider';
 import { usePvZContext } from '../../provider/PvZProvider';
 
-const PlantDetails = () => {
+const PlantDetails = (): JSX.Element | null => {
   const { t } = usePvZContext();
   const { plant } = usePlantContext();
 
@@ -18,6 +24,16 @@ const PlantDetails = () => {
       key: cardThemePlantSx.key,
       value: cardThemePlantSx.value,
     });
+
+  const getConstraintTheme = (constraint: string): SxProps => {
+    if (constraint.startsWith('Sleeps')) {
+      return cardThemePlantSx.constraint_sleep;
+    } else if (constraint.includes('water')) {
+      return cardThemePlantSx.constraint_water;
+    } else {
+      return cardThemePlantSx.constraint_plant;
+    }
+  };
 
   return (
     <Card sx={cardThemePlantSx.base}>
@@ -51,12 +67,15 @@ const PlantDetails = () => {
           t('components.plant.usage')
         )}
         {keyValueText(plant?.special, t('components.plant.special'))}
-        {plant?.constraint && (
-          <Typography sx={cardThemePlantSx.constraint}>
-            {plant?.constraint.join(ARR_JOINER)}
-          </Typography>
-        )}
+        {plant?.constraint &&
+          plant?.constraint.map((constraint) => (
+            <Typography sx={getConstraintTheme(constraint)}>
+              {constraint}
+            </Typography>
+          ))}
         <Typography sx={cardThemePlantSx.text}>{plant.text}</Typography>
+        {keyValueText(plant?.cost, t('components.plant.cost'))}
+        {keyValueText(plant?.recharge, t('components.plant.recharge'))}
       </CardContent>
     </Card>
   );

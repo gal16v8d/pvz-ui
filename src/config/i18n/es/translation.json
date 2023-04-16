@@ -10,9 +10,11 @@
       "unlock": "Desbloquea"
     },
     "plant": {
+      "cost": "Costo",
       "damage": "Daño",
       "firing_spd": "Velocidad disparo",
       "range": "Rango",
+      "recharge": "Recarga",
       "special": "Especial",
       "sun_prod": "Producción de sol",
       "toughness": "Dureza",

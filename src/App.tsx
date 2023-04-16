@@ -5,7 +5,7 @@ import PvZRouter from './router/PvZRouter';
 import { ThemeProvider } from '@mui/material/styles';
 import { baseTheme } from './constants/theme';
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
   console.log(`Running PVZ UI Version: ${import.meta.env.VITE_APP_VERSION}`);
   const queryClient = new QueryClient({
     defaultOptions: {

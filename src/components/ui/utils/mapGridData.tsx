@@ -14,7 +14,10 @@ interface DataId {
   _id: string;
 }
 
-export const mapIndividualData = (apiObject: ApiConfig, data: unknown) => {
+export const mapIndividualData = (
+  apiObject: ApiConfig,
+  data: unknown
+): JSX.Element | null => {
   const key = (data as DataId)._id;
 
   switch (apiObject.name) {
@@ -33,17 +36,20 @@ export const mapIndividualData = (apiObject: ApiConfig, data: unknown) => {
     case API_OBJECT.SURVIVAL:
       return <SurvivalCard key={key} data={data} />;
     default:
-      return undefined;
+      return null;
   }
 };
 
-export const mapListData = (apiObject: ApiConfig, data: unknown[]) => {
+export const mapListData = (
+  apiObject: ApiConfig,
+  data: unknown[]
+): JSX.Element | null => {
   switch (apiObject.name) {
     case API_OBJECT.PLANT:
       return <PlantListing data={data} />;
     case API_OBJECT.ZOMBIE:
       return <ZombieListing data={data} />;
     default:
-      return undefined;
+      return null;
   }
 };

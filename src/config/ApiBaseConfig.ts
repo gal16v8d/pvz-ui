@@ -18,7 +18,7 @@ const EXTEND_GRID_COL = 1;
 const DEFAULT_GRID_COL = 2;
 const BIG_GRID_COL = 5;
 
-const resolveGridColumns = (config: string) => {
+const resolveGridColumns = (config: string): number => {
   switch (config) {
     case API_OBJECT.MINIGAME:
       return BIG_GRID_COL;

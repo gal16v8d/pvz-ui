@@ -13,7 +13,7 @@ interface LevelCardProps {
   data: unknown;
 }
 
-const LevelCard: FC<LevelCardProps> = ({ data }) => {
+const LevelCard: FC<LevelCardProps> = ({ data }): JSX.Element => {
   const { t } = usePvZContext();
   const level = data as Level;
   const plantConfig = API_BASE_CONFIG.filter(

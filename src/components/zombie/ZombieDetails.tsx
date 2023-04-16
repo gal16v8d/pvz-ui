@@ -15,7 +15,7 @@ import { useZombieContext } from './ZombieProvider';
 import { ARR_JOINER } from '../../constants/constants';
 import { usePvZContext } from '../../provider/PvZProvider';
 
-const ZombieDetails = () => {
+const ZombieDetails = (): JSX.Element | null => {
   const { t } = usePvZContext();
   const { zombie } = useZombieContext();
   const plantConfig = API_BASE_CONFIG.filter(
@@ -59,7 +59,7 @@ const ZombieDetails = () => {
     return undefined;
   };
 
-  const transformExtraToughness = (toughnessKey: string) => {
+  const transformExtraToughness = (toughnessKey: string): string => {
     return toughnessKey
       .split('_')
       .map((value) => value.charAt(0).toUpperCase() + value.slice(1))
@@ -96,7 +96,7 @@ const ZombieDetails = () => {
           t('components.zombie.weakness')
         )}
         {zombie?.constraint && (
-          <Typography sx={cardThemeZombieSx.constraint}>
+          <Typography sx={cardThemeZombieSx.constraint_water}>
             {zombie?.constraint}
           </Typography>
         )}

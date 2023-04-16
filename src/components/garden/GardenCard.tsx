@@ -8,7 +8,7 @@ interface GardenCardProps {
   data: unknown;
 }
 
-const GardenCard: FC<GardenCardProps> = ({ data }) => {
+const GardenCard: FC<GardenCardProps> = ({ data }): JSX.Element => {
   const { t } = usePvZContext();
   const garden = data as Garden;
 

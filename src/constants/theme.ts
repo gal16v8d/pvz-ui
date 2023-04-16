@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material/styles';
+import { SxProps, createTheme } from '@mui/material/styles';
 
 const baseTheme = createTheme({
   palette: {
@@ -56,12 +56,18 @@ const cardThemeGraySx = {
   },
 };
 
+const baseConstraintProps = (color: string) => ({
+  typography: 'body1',
+  margin: '1px',
+  color,
+});
+
 const listingAndDetailSx = (
   backgroundColor: string,
   borderColor: string,
   mediaBorderColor: string,
   titleColor: string
-) => ({
+): SxProps => ({
   base: {
     backgroundColor: backgroundColor,
     borderColor: borderColor,
@@ -69,11 +75,9 @@ const listingAndDetailSx = (
     borderWidth: '3rem',
     ...baseFontProps,
   },
-  constraint: {
-    typography: 'body1',
-    margin: '1px',
-    color: 'var(--card-constraint-water-font)',
-  },
+  constraint_plant: baseConstraintProps('var(--card-constraint-plant-font)'),
+  constraint_sleep: baseConstraintProps('var(--card-constraint-sleep-font)'),
+  constraint_water: baseConstraintProps('var(--card-constraint-water-font)'),
   description: {
     typography: 'body1',
     margin: '1px',

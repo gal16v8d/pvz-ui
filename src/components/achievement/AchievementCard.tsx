@@ -8,7 +8,7 @@ interface AchievementCardProps {
   data: unknown;
 }
 
-const AchievementCard: FC<AchievementCardProps> = ({ data }) => {
+const AchievementCard: FC<AchievementCardProps> = ({ data }): JSX.Element => {
   const achievement = data as Achievement;
 
   return (

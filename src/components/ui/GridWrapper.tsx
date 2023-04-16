@@ -6,7 +6,10 @@ interface GridWrapperProps {
   child: JSX.Element;
 }
 
-const GridWrapper: FC<GridWrapperProps> = ({ gridColumns, child }) => {
+const GridWrapper: FC<GridWrapperProps> = ({
+  gridColumns,
+  child,
+}): JSX.Element => {
   return (
     <div style={{ width: '100%' }}>
       <Box

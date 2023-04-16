@@ -8,11 +8,11 @@ interface PuzzleCardProps {
   data: unknown;
 }
 
-const PuzzleCard: FC<PuzzleCardProps> = ({ data }) => {
+const PuzzleCard: FC<PuzzleCardProps> = ({ data }): JSX.Element => {
   const { t } = usePvZContext();
   const puzzle = data as Puzzle;
 
-  const getCardMedia = (puzzle: Puzzle) => {
+  const getCardMedia = (puzzle: Puzzle): string => {
     if (puzzle.category === PuzzleCategory.Vasebreaker) {
       return `vasebreak${puzzle.with_streak ? '_inf' : ''}.png`;
     } else {

@@ -8,7 +8,7 @@ interface ZombieListingProps {
   data: unknown[];
 }
 
-const ZombieListing: FC<ZombieListingProps> = ({ data }) => {
+const ZombieListing: FC<ZombieListingProps> = ({ data }): JSX.Element => {
   return (
     <ZombieProvider>
       <GridWrapper

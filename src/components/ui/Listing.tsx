@@ -10,7 +10,7 @@ interface ListingProps {
   apiObject: ApiConfig;
 }
 
-const Listing: FC<ListingProps> = ({ apiObject }) => {
+const Listing: FC<ListingProps> = ({ apiObject }): JSX.Element => {
   const { data } = useGet(
     apiObject.queryKey,
     get,

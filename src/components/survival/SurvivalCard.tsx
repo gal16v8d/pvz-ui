@@ -8,11 +8,11 @@ interface SurvivalCardProps {
   data: unknown;
 }
 
-const SurvivalCard: FC<SurvivalCardProps> = ({ data }) => {
+const SurvivalCard: FC<SurvivalCardProps> = ({ data }): JSX.Element => {
   const { t } = usePvZContext();
   const survival = data as Survival;
 
-  const mapText = (input: string) => (
+  const mapText = (input: string): JSX.Element => (
     <Typography sx={cardThemeGraySx.title} component={'div'}>
       {input}
     </Typography>

@@ -2,7 +2,7 @@ import { Card, CardMedia } from '@mui/material';
 import { FC } from 'react';
 import { homeTheme } from '../../constants/theme';
 
-const Home: FC = () => {
+const Home: FC = (): JSX.Element => {
   return (
     <Card sx={homeTheme.body}>
       <CardMedia

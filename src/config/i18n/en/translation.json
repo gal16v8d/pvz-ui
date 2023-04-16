@@ -10,9 +10,11 @@
       "unlock": "Unlock"
     },
     "plant": {
+      "cost": "Cost",
       "damage": "Damage",
       "firing_spd": "Firing Speed",
       "range": "Range",
+      "recharge": "Recharge",
       "special": "Special",
       "sun_prod": "Sun production",
       "toughness": "Toughness",

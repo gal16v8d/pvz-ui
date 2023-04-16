@@ -49,6 +49,8 @@
     --card-description-font: rgb(3, 3, 112);
     --card-text-font: rgb(133, 47, 16);
     --card-text-value-font: rgb(255,0,0);
+    --card-constraint-plant-font: var(--card-common-text);
+    --card-constraint-sleep-font: rgb(160, 81, 163);
     --card-constraint-water-font: rgb(15,161,218);
     --card-extras-background: rgb(194,192,193);
     --card-extras-border: rgb(154,154,154);
