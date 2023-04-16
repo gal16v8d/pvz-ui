@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "preview": "vite preview",
     "generate-api-model": "sh generate-api-model.sh && prettier --write 'src/api/models/*.*ts'"
   },
@@ -26,13 +28,18 @@
   },
   "devDependencies": {
     "@openapitools/openapi-generator-cli": "^2.5.2",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "@vitejs/plugin-react": "^3.1.0",
+    "jsdom": "^21.1.1",
     "msw": "^1.1.0",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vitest": "^0.30.1",
+    "whatwg-fetch": "^3.6.2"
   },
   "msw": {
     "workerDirectory": "public"

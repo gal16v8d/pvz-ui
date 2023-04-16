@@ -8,11 +8,14 @@ const keyValueText = (
 ): JSX.Element | null =>
   data ? (
     <GridWrapper
+      key={param}
       gridColumns={2}
       child={
         <>
-          <Typography sx={themeProps.key}>{`${param}:`}</Typography>
-          <Typography sx={themeProps.value}>{data as string}</Typography>
+          <Typography sx={themeProps.key} key={param}>{`${param}:`}</Typography>
+          <Typography sx={themeProps.value} key={`${param}-data`}>
+            {data as string}
+          </Typography>
         </>
       }
     />

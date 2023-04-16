@@ -69,7 +69,7 @@ const PlantDetails = (): JSX.Element | null => {
         {keyValueText(plant?.special, t('components.plant.special'))}
         {plant?.constraint &&
           plant?.constraint.map((constraint) => (
-            <Typography sx={getConstraintTheme(constraint)}>
+            <Typography sx={getConstraintTheme(constraint)} key={constraint}>
               {constraint}
             </Typography>
           ))}
