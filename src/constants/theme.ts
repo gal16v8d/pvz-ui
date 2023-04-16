@@ -1,4 +1,4 @@
-import { SxProps, createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 
 const baseTheme = createTheme({
   palette: {
@@ -67,7 +67,7 @@ const listingAndDetailSx = (
   borderColor: string,
   mediaBorderColor: string,
   titleColor: string
-): SxProps => ({
+): Record<string, Record<string, string>> => ({
   base: {
     backgroundColor: backgroundColor,
     borderColor: borderColor,
