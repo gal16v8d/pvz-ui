@@ -23,7 +23,7 @@ const PlantListing: FC<PlantListingProps> = ({ data }): JSX.Element => {
               child={
                 <>
                   {plants?.map((d) => (
-                    <PlantCard data={d} />
+                    <PlantCard key={d._id} data={d} />
                   ))}
                 </>
               }

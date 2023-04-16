@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import DataId from '../../types/DataId';
 import GridWrapper from '../ui/GridWrapper';
 import ZombieCard from './ZombieCard';
 import ZombieDetails from './ZombieDetails';
@@ -20,7 +21,7 @@ const ZombieListing: FC<ZombieListingProps> = ({ data }): JSX.Element => {
               child={
                 <>
                   {data?.map((d) => (
-                    <ZombieCard data={d} />
+                    <ZombieCard key={(d as DataId)._id} data={d} />
                   ))}
                 </>
               }

@@ -9,6 +9,9 @@
       "minigame": "Minijuego",
       "unlock": "Desbloquea"
     },
+    "home": {
+      "text": "Da click en el menu arriba a la izquierda para explorar esta wiki."
+    },
     "plant": {
       "cost": "Costo",
       "damage": "Daño",

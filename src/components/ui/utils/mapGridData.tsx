@@ -1,5 +1,6 @@
 import ApiConfig from '../../../api/config/ApiConfig';
 import { API_OBJECT } from '../../../config/ApiBaseConfig';
+import DataId from '../../../types/DataId';
 import AchievementCard from '../../achievement/AchievementCard';
 import GardenCard from '../../garden/GardenCard';
 import ItemCard from '../../item/ItemCard';
@@ -9,10 +10,6 @@ import PlantListing from '../../plant/PlantListing';
 import PuzzleCard from '../../puzzle/PuzzleCard';
 import SurvivalCard from '../../survival/SurvivalCard';
 import ZombieListing from '../../zombie/ZombieListing';
-
-interface DataId {
-  _id: string;
-}
 
 export const mapIndividualData = (
   apiObject: ApiConfig,

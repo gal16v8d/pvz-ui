@@ -9,6 +9,9 @@
       "minigame": "Minigame",
       "unlock": "Unlock"
     },
+    "home": {
+      "text": "Please click the upper-left corner menu to explore the wiki info"
+    },
     "plant": {
       "cost": "Cost",
       "damage": "Damage",
