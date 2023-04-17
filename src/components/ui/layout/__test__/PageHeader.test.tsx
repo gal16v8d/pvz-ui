@@ -1,5 +1,5 @@
-import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import { PvZProvider } from '@/provider/PvZProvider';
+import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import PageHeader from '../PageHeader';
 
 test('renders layout footer app', () => {
@@ -9,5 +9,5 @@ test('renders layout footer app', () => {
     </PvZProvider>
   );
   const headerAppTitle = screen.getByText(/Plants Vs Zombies - Wiki/i);
-  expect(headerAppTitle).toBeTruthy();
+  expect(headerAppTitle).toBeDefined();
 });

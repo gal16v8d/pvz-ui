@@ -1,5 +1,5 @@
-import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import { PvZProvider } from '@/provider/PvZProvider';
+import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import PageFooter from '../PageFooter';
 
 test('renders layout footer app', () => {
@@ -10,6 +10,6 @@ test('renders layout footer app', () => {
   );
   const footerAppName = screen.getByText(/PvZ-Api/i);
   const footerMit = screen.getByText(/MIT/i);
-  expect(footerAppName).toBeTruthy();
-  expect(footerMit).toBeTruthy();
+  expect(footerAppName).toBeDefined();
+  expect(footerMit).toBeDefined();
 });
