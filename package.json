@@ -35,11 +35,11 @@
     "@vitejs/plugin-react": "^3.1.0",
     "jsdom": "^21.1.1",
     "msw": "^1.1.0",
+    "node-fetch": "^3.3.1",
     "prettier": "^2.8.4",
     "typescript": "^4.9.3",
     "vite": "^4.1.0",
-    "vitest": "^0.30.1",
-    "whatwg-fetch": "^3.6.2"
+    "vitest": "^0.30.1"
   },
   "msw": {
     "workerDirectory": "public"
