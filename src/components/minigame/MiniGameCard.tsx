@@ -7,7 +7,7 @@ interface MiniGameCardProps {
   data: unknown;
 }
 
-const MiniGameCard: FC<MiniGameCardProps> = ({ data }): JSX.Element => {
+const MiniGameCard: FC<MiniGameCardProps> = ({ data }): React.ReactElement => {
   const minigame = data as MiniGame;
 
   return (

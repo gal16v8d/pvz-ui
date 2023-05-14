@@ -10,7 +10,7 @@ const PvZContext = React.createContext<PvZContextProps | undefined>(undefined);
 
 const PvZProvider = (
   props: React.PropsWithChildren<Record<string, unknown>>
-): JSX.Element => {
+): React.ReactElement => {
   const { t } = useTranslation();
 
   return (

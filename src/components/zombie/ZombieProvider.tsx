@@ -12,7 +12,7 @@ const ZombieContext = React.createContext<ZombieContextProps | undefined>(
 
 const ZombieProvider = (
   props: React.PropsWithChildren<Record<string, unknown>>
-): JSX.Element => {
+): React.ReactElement => {
   const [zombie, setZombie] = useState<Zombie>();
 
   return (

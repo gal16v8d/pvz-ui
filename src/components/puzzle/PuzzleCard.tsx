@@ -8,7 +8,7 @@ interface PuzzleCardProps {
   data: unknown;
 }
 
-const PuzzleCard: FC<PuzzleCardProps> = ({ data }): JSX.Element => {
+const PuzzleCard: FC<PuzzleCardProps> = ({ data }): React.ReactElement => {
   const { t } = usePvZContext();
   const puzzle = data as Puzzle;
 

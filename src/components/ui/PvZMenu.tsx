@@ -29,7 +29,7 @@ const mapApiToMenu = (
     };
   });
 
-const PvZMenu: FC = (): JSX.Element => {
+const PvZMenu: FC = (): React.ReactElement => {
   const { t } = usePvZContext();
   const navigate = useNavigate();
   const options = mapApiToMenu(t, navigate);

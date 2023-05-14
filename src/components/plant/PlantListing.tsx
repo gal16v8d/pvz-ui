@@ -9,7 +9,7 @@ interface PlantListingProps {
   data: unknown[];
 }
 
-const PlantListing: FC<PlantListingProps> = ({ data }): JSX.Element => {
+const PlantListing: FC<PlantListingProps> = ({ data }): React.ReactElement => {
   const plants = (data as Plant[])?.sort((a, b) => a.number - b.number);
 
   return (

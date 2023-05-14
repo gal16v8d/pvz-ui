@@ -11,7 +11,7 @@ import {
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantProvider';
 
-const PlantDetails = (): JSX.Element | null => {
+const PlantDetails = (): React.ReactElement | null => {
   const { t } = usePvZContext();
   const { plant } = usePlantContext();
 
@@ -19,7 +19,7 @@ const PlantDetails = (): JSX.Element | null => {
     return null;
   }
 
-  const keyValueText = (data: unknown, param: string): JSX.Element | null =>
+  const keyValueText = (data: unknown, param: string): React.ReactNode | null =>
     gridKeyValueText(data, param, {
       key: cardThemePlantSx.key,
       value: cardThemePlantSx.value,

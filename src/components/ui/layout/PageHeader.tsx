@@ -1,7 +1,7 @@
 import { usePvZContext } from '@/provider/PvZProvider';
 import './PageHeader.css';
 
-const PageHeader = (): JSX.Element => {
+const PageHeader = (): React.ReactElement => {
   const { t } = usePvZContext();
   return (
     <header className="header">

@@ -15,7 +15,7 @@ import {
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { useZombieContext } from './ZombieProvider';
 
-const ZombieDetails = (): JSX.Element | null => {
+const ZombieDetails = (): React.ReactElement | null => {
   const { t } = usePvZContext();
   const { zombie } = useZombieContext();
   const plantConfig = API_BASE_CONFIG.filter(
@@ -40,7 +40,7 @@ const ZombieDetails = (): JSX.Element | null => {
     return null;
   }
 
-  const keyValueText = (data: unknown, param: string): JSX.Element | null =>
+  const keyValueText = (data: unknown, param: string): React.ReactNode | null =>
     gridKeyValueText(data, param, {
       key: cardThemeZombieSx.key,
       value: cardThemeZombieSx.value,

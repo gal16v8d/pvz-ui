@@ -12,7 +12,7 @@ const PlantContext = React.createContext<PlantContextProps | undefined>(
 
 const PlantProvider = (
   props: React.PropsWithChildren<Record<string, unknown>>
-): JSX.Element => {
+): React.ReactElement => {
   const [plant, setPlant] = useState<Plant>();
 
   return (

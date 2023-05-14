@@ -8,6 +8,9 @@ export default defineConfig({
   test: {
     // Do not process css files (is slow)
     css: false,
+    coverage: {
+      reporter: ['text', 'lcov'],
+    },
     environment: 'jsdom',
     // This is to not import test, it, expect, vi (instead of jest). Similar to how jest works
     globals: true,

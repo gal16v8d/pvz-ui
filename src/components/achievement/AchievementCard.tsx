@@ -8,7 +8,9 @@ interface AchievementCardProps {
   data: unknown;
 }
 
-const AchievementCard: FC<AchievementCardProps> = ({ data }): JSX.Element => {
+const AchievementCard: FC<AchievementCardProps> = ({
+  data,
+}): React.ReactElement => {
   const achievement = data as Achievement;
 
   return (

@@ -9,7 +9,7 @@ interface PlantCardProps {
   data: unknown;
 }
 
-const PlantCard: FC<PlantCardProps> = ({ data }): JSX.Element => {
+const PlantCard: FC<PlantCardProps> = ({ data }): React.ReactElement => {
   const { setPlant } = usePlantContext();
   const plant = data as Plant;
 

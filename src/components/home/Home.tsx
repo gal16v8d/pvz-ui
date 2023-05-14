@@ -3,7 +3,7 @@ import { usePvZContext } from '@/provider/PvZProvider';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
 import { FC } from 'react';
 
-const Home: FC = (): JSX.Element => {
+const Home: FC = (): React.ReactElement => {
   const { t } = usePvZContext();
 
   return (

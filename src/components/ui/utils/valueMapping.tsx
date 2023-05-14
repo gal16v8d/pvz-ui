@@ -5,7 +5,7 @@ const keyValueText = (
   data: unknown,
   param: string,
   themeProps: { key: SxProps; value: SxProps }
-): JSX.Element | null =>
+): React.ReactNode | null =>
   data ? (
     <GridWrapper
       key={param}

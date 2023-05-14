@@ -1,7 +1,7 @@
 import { usePvZContext } from '@/provider/PvZProvider';
 import './PageFooter.css';
 
-const PageFooter = (): JSX.Element => {
+const PageFooter = (): React.ReactElement => {
   const { t } = usePvZContext();
   return (
     <footer className="footer">

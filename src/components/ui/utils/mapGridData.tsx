@@ -14,7 +14,7 @@ import DataId from '@/types/DataId';
 export const mapIndividualData = (
   apiObject: ApiConfig,
   data: unknown
-): JSX.Element | null => {
+): React.ReactNode | null => {
   const key = (data as DataId)._id;
 
   switch (apiObject.name) {
@@ -40,7 +40,7 @@ export const mapIndividualData = (
 export const mapListData = (
   apiObject: ApiConfig,
   data: unknown[]
-): JSX.Element | null => {
+): React.ReactNode | null => {
   switch (apiObject.name) {
     case API_OBJECT.PLANT:
       return <PlantListing data={data} />;

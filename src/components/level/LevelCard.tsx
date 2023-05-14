@@ -13,7 +13,7 @@ interface LevelCardProps {
   data: unknown;
 }
 
-const LevelCard: FC<LevelCardProps> = ({ data }): JSX.Element => {
+const LevelCard: FC<LevelCardProps> = ({ data }): React.ReactElement => {
   const { t } = usePvZContext();
   const level = data as Level;
   const plantConfig = API_BASE_CONFIG.filter(
@@ -49,13 +49,13 @@ const LevelCard: FC<LevelCardProps> = ({ data }): JSX.Element => {
     return <CircularProgress />;
   }
 
-  const keyValueText = (data: unknown, param: string): JSX.Element | null =>
+  const keyValueText = (data: unknown, param: string): React.ReactNode | null =>
     gridKeyValueText(data, param, {
       key: cardThemeBrownSx.title,
       value: cardThemeBrownSx.body,
     });
 
-  const mapUnlockKeyAndValue = (level: Level): JSX.Element | null => {
+  const mapUnlockKeyAndValue = (level: Level): React.ReactNode | null => {
     let uiValue;
     if (level.ref === itemConfig.name) {
       const itemsArr = items as Item[];

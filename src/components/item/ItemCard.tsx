@@ -7,7 +7,7 @@ interface ItemCardProps {
   data: unknown;
 }
 
-const ItemCard: FC<ItemCardProps> = ({ data }): JSX.Element => {
+const ItemCard: FC<ItemCardProps> = ({ data }): React.ReactElement => {
   const item = data as Item;
 
   return (
