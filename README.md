@@ -26,13 +26,19 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 Generate all the models from swagger docs available in the backend services, it can be upgraded by calling the command again.
 
-## Stay in touch
+### Docker
 
-- Author - [gal16v8d](https://github.com/gal16v8d)
+To build the docker image, inside project dir:
 
-## License
+```bash
+docker build -t gsdd-pvz-ui .
+```
 
-[MIT licensed](LICENSE).
+Then run using something like:
+
+```bash
+docker run -p 5173:5173 -e VITE_API_URL=http://api.example.com -e VITE_APP_VERSION=0.0.1 -e VITE_ENABLE_MOCKS=true gsdd-pvz-ui
+```
 
 ## List of cool technologies in use here
 
@@ -42,3 +48,11 @@ Generate all the models from swagger docs available in the backend services, it 
 - [React-i18next](https://react.i18next.com/)
 - [React-Query](https://tanstack.com/query/v4/docs/react/adapters/react-query)
 - [Vite](https://vitejs.dev/)
+
+## License
+
+[MIT licensed](LICENSE).
+
+## Stay in touch
+
+- Author - [gal16v8d](https://github.com/gal16v8d)
