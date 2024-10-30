@@ -1,5 +1,5 @@
 import { API_OBJECT } from '../config/ApiBaseConfig';
-import { rest } from 'msw';
+import { http, HttpResponse } from 'msw';
 import achievementsJson from './__mocks__/achievements.json';
 import gardensJson from './__mocks__/gardens.json';
 import itemsJson from './__mocks__/items.json';
@@ -11,32 +11,32 @@ import survivalsJson from './__mocks__/survivals.json';
 import zombiesJson from './__mocks__/zombies.json';
 
 const handlers = [
-  rest.get(`*${API_OBJECT.ACHIEVEMENT}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(achievementsJson))
+  http.get(`*${API_OBJECT.ACHIEVEMENT}s`, () =>
+    HttpResponse.json(achievementsJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.GARDEN}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(gardensJson))
+  http.get(`*${API_OBJECT.GARDEN}s`, () =>
+    HttpResponse.json(gardensJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.ITEM}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(itemsJson))
+  http.get(`*${API_OBJECT.ITEM}s`, () =>
+    HttpResponse.json(itemsJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.LEVEL}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(levelsJson))
+  http.get(`*${API_OBJECT.LEVEL}s`, () =>
+    HttpResponse.json(levelsJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.MINIGAME}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(minigamesJson))
+  http.get(`*${API_OBJECT.MINIGAME}s`, () =>
+    HttpResponse.json(minigamesJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.PLANT}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(plantsJson))
+  http.get(`*${API_OBJECT.PLANT}s`, () =>
+    HttpResponse.json(plantsJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.PUZZLE}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(puzzlesJson))
+  http.get(`*${API_OBJECT.PUZZLE}s`, () =>
+    HttpResponse.json(puzzlesJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.SURVIVAL}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(survivalsJson))
+  http.get(`*${API_OBJECT.SURVIVAL}s`, () =>
+    HttpResponse.json(survivalsJson, { status: 200 })
   ),
-  rest.get(`*${API_OBJECT.ZOMBIE}s`, (_req, res, ctx) =>
-    res(ctx.status(200), ctx.json(zombiesJson))
+  http.get(`*${API_OBJECT.ZOMBIE}s`, () =>
+    HttpResponse.json(zombiesJson, { status: 200 })
   ),
 ];
 

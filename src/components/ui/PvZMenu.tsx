@@ -1,6 +1,6 @@
 import { API_BASE_CONFIG } from '@/config/ApiBaseConfig';
 import { menuTheme } from '@/constants/theme';
-import { usePvZContext } from '@/provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZContext';
 import { PvZSwipeableAnchorType } from '@/types/anchor';
 import { ArrowForward, FormatListBulleted } from '@mui/icons-material';
 import {

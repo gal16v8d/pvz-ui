@@ -16,10 +16,12 @@ const ZombieListing: FC<ZombieListingProps> = ({
     <ZombieProvider>
       <GridWrapper
         gridColumns={2}
+        gridId="toplevel-list-zombies"
         child={
           <>
             <GridWrapper
               gridColumns={5}
+              gridId="list-zombies"
               child={
                 <>
                   {data?.map((d) => (

@@ -10,6 +10,17 @@ export default defineConfig({
     css: false,
     coverage: {
       reporter: ['text', 'lcov'],
+      exclude: [
+        '**/mockServiceWorker.js',
+        '**/api/responses/**',
+        '**/config/**',
+        '**/constants/**',
+        '**/mocks/**',
+        '**/models/**',
+        '**/types/**',
+        '**/*.d.{js,mjs,cjs,ts,mts,cts,jsx,tsx}',
+        '**/.eslintrc.cjs'
+      ]
     },
     environment: 'jsdom',
     // This is to not import test, it, expect, vi (instead of jest). Similar to how jest works

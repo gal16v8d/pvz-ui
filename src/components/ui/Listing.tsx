@@ -5,6 +5,7 @@ import { CircularProgress } from '@mui/material';
 import { FC } from 'react';
 import GridWrapper from './GridWrapper';
 import { mapIndividualData, mapListData } from './utils/mapGridData';
+import { TEST_ID } from '@/constants/testid';
 
 interface ListingProps {
   apiObject: ApiConfig;
@@ -23,12 +24,13 @@ const Listing: FC<ListingProps> = ({ apiObject }): React.ReactElement => {
   );
 
   if (!data) {
-    return <CircularProgress />;
+    return <CircularProgress data-testid={TEST_ID.CircularProgress} />;
   }
 
   return (
     <GridWrapper
       gridColumns={apiObject.gridColumns}
+      gridId={`list-${apiObject.name}`}
       child={
         <>
           {data?.map((d) => mapIndividualData(apiObject, d))}

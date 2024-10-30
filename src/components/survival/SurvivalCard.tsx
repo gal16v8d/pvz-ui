@@ -1,6 +1,6 @@
 import { Survival } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
-import { usePvZContext } from '@/provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
 import { FC } from 'react';
 

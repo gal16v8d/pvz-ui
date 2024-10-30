@@ -40,7 +40,7 @@ export const API_BASE_CONFIG: ApiConfig[] = Object.values(API_OBJECT).map(
     name: config,
     expanded: config === 'zombie',
     queryKey: `${config}s`,
-    route: `/${config}s`,
+    route: `${config}s`,
     gridColumns: resolveGridColumns(config),
   })
 );

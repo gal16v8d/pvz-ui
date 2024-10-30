@@ -17,6 +17,7 @@ const AchievementCard: FC<AchievementCardProps> = ({
     <Card sx={cardThemeBrownSx.base}>
       <GridWrapper
         gridColumns={2}
+        gridId={`achievement-${achievement._id}`}
         child={
           <>
             <CardMedia

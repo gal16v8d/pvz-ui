@@ -1,5 +1,5 @@
 import { homeTheme } from '@/constants/theme';
-import { usePvZContext } from '@/provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZContext';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
 import { FC } from 'react';
 

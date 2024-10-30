@@ -16,10 +16,12 @@ const PlantListing: FC<PlantListingProps> = ({ data }): React.ReactElement => {
     <PlantProvider>
       <GridWrapper
         gridColumns={2}
+        gridId="toplevel-list-plants"
         child={
           <>
             <GridWrapper
               gridColumns={8}
+              gridId="list-plants"
               child={
                 <>
                   {plants?.map((d) => (

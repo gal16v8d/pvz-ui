@@ -4,7 +4,7 @@ import { useGet } from '@/api/services/hooks/useGenericService';
 import { API_BASE_CONFIG, API_OBJECT } from '@/config/ApiBaseConfig';
 import { ARR_JOINER } from '@/constants/constants';
 import { cardThemeZombieSx } from '@/constants/theme';
-import { usePvZContext } from '@/provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZContext';
 import {
   Card,
   CardContent,

@@ -2,7 +2,7 @@ import { Plant } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardActionArea, CardMedia } from '@mui/material';
 import { FC } from 'react';
-import { usePlantContext } from './PlantProvider';
+import { usePlantContext } from './PlantContext';
 import { TEST_ID } from '@/constants/testid';
 
 interface PlantCardProps {

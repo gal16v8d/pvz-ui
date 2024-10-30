@@ -1,6 +1,6 @@
 import { ARR_JOINER } from '@/constants/constants';
 import { cardThemePlantSx } from '@/constants/theme';
-import { usePvZContext } from '@/provider/PvZProvider';
+import { usePvZContext } from '@/provider/PvZContext';
 import {
   Card,
   CardContent,
@@ -9,7 +9,7 @@ import {
   Typography,
 } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
-import { usePlantContext } from './PlantProvider';
+import { usePlantContext } from './PlantContext';
 
 const PlantDetails = (): React.ReactElement | null => {
   const { t } = usePvZContext();
@@ -52,6 +52,7 @@ const PlantDetails = (): React.ReactElement | null => {
           plant?.production?.join(ARR_JOINER),
           t('components.plant.sun_prod')
         )}
+        {keyValueText(plant?.effect, t('components.plant.effect'))}
         {keyValueText(plant?.toughness, t('components.plant.toughness'))}
         {plant?.damage &&
           !plant?.damage_notes &&
@@ -61,7 +62,7 @@ const PlantDetails = (): React.ReactElement | null => {
           )}
         {keyValueText(plant?.damage_notes, t('components.plant.damage'))}
         {keyValueText(plant?.range, t('components.plant.range'))}
-        {keyValueText(plant?.firing_speed, t('components.plant.firing_spd'))}
+        {keyValueText(plant?.firing_speed, t('components.plant.firing_speed'))}
         {keyValueText(
           plant?.usage?.join(ARR_JOINER),
           t('components.plant.usage')
