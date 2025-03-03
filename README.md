@@ -7,7 +7,7 @@ This UI consumes a python API (see pvz-svc repo) who currently is not alive, sin
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, create a `.env` file (you can inspect available sample `.env.sample`), then you can use the following commands:
 
 ### `npm run dev`
 
