@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { PuzzleCategory } from "./puzzleCategory";
+import type { PuzzleCategory } from "./puzzleCategory";
 
 export interface Puzzle {
   _id?: string;

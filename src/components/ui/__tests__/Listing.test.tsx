@@ -1,6 +1,6 @@
 import ApiError from '@/api/responses/ApiError';
 import Listing from '../Listing';
-import { UseQueryResult } from '@tanstack/react-query';
+import type { UseQueryResult } from '@tanstack/react-query';
 import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import { API_OBJECT } from '@/config/ApiBaseConfig';
 import { TEST_ID } from '@/constants/testid';

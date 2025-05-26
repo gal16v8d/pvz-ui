@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import React, { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
 interface GridWrapperProps {
   gridColumns: number;
@@ -11,7 +11,7 @@ const GridWrapper: FC<GridWrapperProps> = ({
   gridColumns,
   gridId,
   child,
-}): React.ReactElement => {
+}): ReactElement => {
   return (
     <div style={{ width: '100%' }}>
       <Box

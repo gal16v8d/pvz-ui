@@ -1,8 +1,8 @@
-import ApiConfig from '@/api/config/ApiConfig';
+import type { ApiConfig } from '@/api/config/ApiConfig';
 import { get } from '@/api/services/CrudService';
 import { useGet } from '@/api/services/hooks/useGenericService';
 import { CircularProgress } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 import GridWrapper from './GridWrapper';
 import { mapIndividualData, mapListData } from './utils/mapGridData';
 import { TEST_ID } from '@/constants/testid';

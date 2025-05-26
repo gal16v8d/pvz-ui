@@ -10,4 +10,5 @@
  * Do not edit the class manually.
  */
 
+// eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface LocationInner {}

@@ -1,5 +1,5 @@
-import { Plant } from '@/api/models';
-import { FC } from 'react';
+import type { Plant } from '@/api/models';
+import type { FC } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 import PlantCard from './PlantCard';
 import PlantDetails from './PlantDetails';

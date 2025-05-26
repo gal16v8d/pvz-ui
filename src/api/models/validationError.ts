@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { LocationInner } from "./locationInner";
+import type { LocationInner } from "./locationInner";
 
 export interface ValidationError {
   loc: Array<LocationInner>;

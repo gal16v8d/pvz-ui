@@ -1,7 +1,7 @@
-import { Achievement } from '@/api/models';
+import type { Achievement } from '@/api/models';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 
 interface AchievementCardProps {

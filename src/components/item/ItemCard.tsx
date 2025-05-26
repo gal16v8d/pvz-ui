@@ -1,7 +1,7 @@
-import { Item } from '@/api/models';
+import type { Item } from '@/api/models';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { Card, CardContent, Typography } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface ItemCardProps {
   data: unknown;

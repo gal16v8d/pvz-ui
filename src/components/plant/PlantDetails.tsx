@@ -1,13 +1,8 @@
 import { ARR_JOINER } from '@/constants/constants';
 import { cardThemePlantSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  SxProps,
-  Typography,
-} from '@mui/material';
+import type { SxProps } from '@mui/material';
+import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantContext';
 

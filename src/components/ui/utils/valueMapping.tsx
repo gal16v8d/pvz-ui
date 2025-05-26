@@ -1,4 +1,5 @@
-import { SxProps, Typography } from '@mui/material';
+import type { SxProps } from '@mui/material';
+import { Typography } from '@mui/material';
 import GridWrapper from '../GridWrapper';
 
 const keyValueText = (

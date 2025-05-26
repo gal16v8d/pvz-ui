@@ -10,10 +10,4 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum AdventureRef {
-  Item = "item",
-  Plant = "plant",
-}
+export type AdventureRef = "item" | "plant";

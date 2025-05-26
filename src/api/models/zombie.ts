@@ -9,8 +9,8 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Speed } from "./speed";
-import { ZombieToughness } from "./zombieToughness";
+import type { Speed } from "./speed";
+import type { ZombieToughness } from "./zombieToughness";
 
 export interface Zombie {
   description?: string;

@@ -1,5 +1,5 @@
 import ApiError from '../responses/ApiError';
-import { HTTPValidationError } from '../models';
+import type { HTTPValidationError } from '../models';
 
 const handleError = async (response: Response) => {
   if (response.status === 404) {

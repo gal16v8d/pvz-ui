@@ -10,11 +10,7 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum Effect {
-  ImmobilizesZombies = "immobilizes zombies",
-  PenetratesScreenDoors = "penetrates screen doors",
-  SlowsZombies = "slows zombies",
-}
+export type Effect = 
+  | "immobilizes zombies"
+  | "penetrates screen doors"
+  | "slows zombies";

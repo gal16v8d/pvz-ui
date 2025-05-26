@@ -1,10 +1,6 @@
 import ApiError from '@/api/responses/ApiError';
-import {
-  useMutation,
-  UseMutationResult,
-  useQuery,
-  UseQueryResult,
-} from '@tanstack/react-query';
+import type { UseMutationResult, UseQueryResult } from '@tanstack/react-query';
+import { useMutation, useQuery } from '@tanstack/react-query';
 
 const useGet = (
   queryKey: string,

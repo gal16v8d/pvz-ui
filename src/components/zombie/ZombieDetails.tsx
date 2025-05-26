@@ -1,4 +1,4 @@
-import { Plant } from '@/api/models';
+import type { Plant } from '@/api/models';
 import { get } from '@/api/services/CrudService';
 import { useGet } from '@/api/services/hooks/useGenericService';
 import { API_BASE_CONFIG, API_OBJECT } from '@/config/ApiBaseConfig';
@@ -13,7 +13,7 @@ import {
   Typography,
 } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
-import { useZombieContext } from './ZombieProvider';
+import { useZombieContext } from './ZombieContext';
 
 const ZombieDetails = (): React.ReactElement | null => {
   const { t } = usePvZContext();

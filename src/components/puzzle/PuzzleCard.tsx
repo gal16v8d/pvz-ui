@@ -1,8 +1,8 @@
-import { Puzzle, PuzzleCategory } from '@/api/models';
+import { VASEBREAKER, type Puzzle } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface PuzzleCardProps {
   data: unknown;
@@ -13,7 +13,7 @@ const PuzzleCard: FC<PuzzleCardProps> = ({ data }): React.ReactElement => {
   const puzzle = data as Puzzle;
 
   const getCardMedia = (puzzle: Puzzle): string => {
-    if (puzzle.category === PuzzleCategory.Vasebreaker) {
+    if (puzzle.category === VASEBREAKER) {
       return `vasebreak${puzzle.with_streak ? '_inf' : ''}.png`;
     } else {
       return `I_zombie${puzzle.with_streak ? '_inf' : ''}.png`;

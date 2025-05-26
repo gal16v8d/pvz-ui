@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactElement } from 'react';
+import type { ReactElement } from 'react';
 
 import i18n from '@/config/i18n/languageconfig';
 import { render as rltRender } from '@testing-library/react';

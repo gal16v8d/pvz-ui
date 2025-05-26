@@ -10,12 +10,8 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum Usage {
-  DelayedActivation = "delayed activation",
-  Instant = "instant",
-  OnContact = "on contact",
-  SingleUse = "single use",
-}
+export type Usage = 
+  | "delayed activation"
+  | "instant"
+  | "on contact"
+  | "single use";

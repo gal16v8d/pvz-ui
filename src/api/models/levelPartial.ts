@@ -9,7 +9,7 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { AdventureRef } from "./adventureRef";
+import type { AdventureRef } from "./adventureRef";
 
 export interface LevelPartial {
   level?: string;

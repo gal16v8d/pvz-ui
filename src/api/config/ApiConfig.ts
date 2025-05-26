@@ -6,4 +6,4 @@ interface ApiConfig {
   gridColumns: number;
 }
 
-export default ApiConfig;
+export type { ApiConfig };

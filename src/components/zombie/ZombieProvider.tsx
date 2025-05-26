@@ -1,18 +1,11 @@
-import { Zombie } from '@/api/models';
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import type { Zombie } from '@/api/models';
+import type { PropsWithChildren, ReactElement } from 'react';
+import { useState } from 'react';
+import { ZombieContext } from './ZombieContext';
 
-interface ZombieContextProps {
-  zombie: Zombie | undefined;
-  setZombie: Dispatch<SetStateAction<Zombie | undefined>>;
-}
-
-const ZombieContext = React.createContext<ZombieContextProps | undefined>(
-  undefined
-);
-
-const ZombieProvider = (
-  props: React.PropsWithChildren<Record<string, unknown>>
-): React.ReactElement => {
+export const ZombieProvider = (
+  props: PropsWithChildren<Record<string, unknown>>
+): ReactElement => {
   const [zombie, setZombie] = useState<Zombie>();
 
   return (
@@ -26,13 +19,3 @@ const ZombieProvider = (
     </ZombieContext.Provider>
   );
 };
-
-function useZombieContext(): ZombieContextProps {
-  const context = React.useContext(ZombieContext);
-  if (context === undefined) {
-    throw new Error('ZombieContext must be used within ZombieProvider');
-  }
-  return context;
-}
-
-export { ZombieProvider, useZombieContext };

@@ -3,7 +3,7 @@ import { PlantProvider } from '../PlantProvider';
 import { PlantContext } from '../PlantContext';
 import { renderWithBaseProviders, screen } from '@/testutils/testutils';
 import PlantsJson from '@/mocks/__mocks__/plants.json';
-import { Plant } from '@/api/models';
+import type { Plant } from '@/api/models';
 
 describe('PlantDetails test suite', () => {
   type PlanDetailsParam = {

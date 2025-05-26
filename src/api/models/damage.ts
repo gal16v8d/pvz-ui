@@ -10,14 +10,10 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum Damage {
-  Heavy = "heavy",
-  Light = "light",
-  Massive = "massive",
-  Normal = "normal",
-  VeryHeavy = "very heavy",
-  VeryLight = "very light",
-}
+export type Damage = 
+  | "heavy"
+  | "light"
+  | "massive"
+  | "normal"
+  | "very heavy"
+  | "very light";

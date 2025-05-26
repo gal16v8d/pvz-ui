@@ -10,14 +10,10 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum ZombieToughness {
-  Extreme = "extreme",
-  ExtremelyHigh = "extremely high",
-  High = "high",
-  Low = "low",
-  Medium = "medium",
-  VeryHigh = "very high",
-}
+export type ZombieToughness = 
+  | "extreme"
+  | "extremely high"
+  | "high"
+  | "low"
+  | "medium"
+  | "very high";

@@ -10,10 +10,4 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum PlantToughness {
-  High = "high",
-  VeryHigh = "very high",
-}
+export type PlantToughness = "high" | "very high";

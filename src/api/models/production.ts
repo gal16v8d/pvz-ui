@@ -10,11 +10,4 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum Production {
-  Double = "double",
-  Low = "low",
-  Normal = "normal",
-}
+export type Production = "double" | "low" | "normal";

@@ -9,12 +9,12 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-import { Usage } from "./usage";
-import { PlantToughness } from "./plantToughness";
-import { Production } from "./production";
-import { Effect } from "./effect";
-import { Recharge } from "./recharge";
-import { Damage } from "./damage";
+import type { Usage } from "./usage";
+import type { PlantToughness } from "./plantToughness";
+import type { Production } from "./production";
+import type { Effect } from "./effect";
+import type { Recharge } from "./recharge";
+import type { Damage } from "./damage";
 
 export interface Plant {
   production?: Array<Production>;

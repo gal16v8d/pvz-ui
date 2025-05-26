@@ -1,4 +1,4 @@
-import { Item, Level, Plant } from '@/api/models';
+import type { Item, Level, Plant } from '@/api/models';
 import { get } from '@/api/services/CrudService';
 import { useGet } from '@/api/services/hooks/useGenericService';
 import { API_BASE_CONFIG, API_OBJECT } from '@/config/ApiBaseConfig';
@@ -6,7 +6,7 @@ import { ARR_JOINER } from '@/constants/constants';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, Chip, CircularProgress } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 
 interface LevelCardProps {

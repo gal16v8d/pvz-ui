@@ -10,11 +10,4 @@
  * Do not edit the class manually.
  */
 
-/**
- * An enumeration.
- */
-export enum Speed {
-  Fast = "fast",
-  Normal = "normal",
-  Slow = "slow",
-}
+export type Speed = "fast" | "normal" | "slow";

@@ -9,11 +9,6 @@
  * https://openapi-generator.tech
  * Do not edit the class manually.
  */
-
-/**
- * An enumeration.
- */
-export enum PuzzleCategory {
-  IZombie = "I, Zombie",
-  Vasebreaker = "Vasebreaker",
-}
+export const I_ZOMBIE: PuzzleCategory = "I, Zombie";
+export const VASEBREAKER: PuzzleCategory = "Vasebreaker";
+export type PuzzleCategory = "I, Zombie" | "Vasebreaker";

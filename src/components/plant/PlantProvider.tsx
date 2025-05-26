@@ -1,4 +1,4 @@
-import { Plant } from '@/api/models';
+import type { Plant } from '@/api/models';
 import React, { useState } from 'react';
 import { PlantContext } from './PlantContext';
 

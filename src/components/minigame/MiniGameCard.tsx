@@ -1,7 +1,7 @@
-import { MiniGame } from '@/api/models';
+import type { MiniGame } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 interface MiniGameCardProps {
   data: unknown;
