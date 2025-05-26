@@ -1,7 +1,7 @@
 import type { Plant } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardActionArea, CardMedia } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import { usePlantContext } from './PlantContext';
 import { TEST_ID } from '@/constants/testid';
 
@@ -9,7 +9,7 @@ interface PlantCardProps {
   data: unknown;
 }
 
-const PlantCard: FC<PlantCardProps> = ({ data }): React.ReactElement => {
+const PlantCard: FC<PlantCardProps> = ({ data }): ReactElement => {
   const { setPlant } = usePlantContext();
   const plant = data as Plant;
 

@@ -2,13 +2,13 @@ import type { Garden } from '@/api/models';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
 interface GardenCardProps {
   data: unknown;
 }
 
-const GardenCard: FC<GardenCardProps> = ({ data }): React.ReactElement => {
+const GardenCard: FC<GardenCardProps> = ({ data }): ReactElement => {
   const { t } = usePvZContext();
   const garden = data as Garden;
 

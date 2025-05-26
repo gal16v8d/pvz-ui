@@ -1,10 +1,10 @@
 import { Box } from '@mui/material';
-import type { FC, ReactElement } from 'react';
+import type { FC, ReactElement, ReactNode } from 'react';
 
 interface GridWrapperProps {
   gridColumns: number;
   gridId: string;
-  child: React.ReactNode;
+  child: ReactNode;
 }
 
 const GridWrapper: FC<GridWrapperProps> = ({

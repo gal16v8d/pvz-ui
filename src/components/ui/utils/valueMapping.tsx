@@ -1,12 +1,13 @@
 import type { SxProps } from '@mui/material';
 import { Typography } from '@mui/material';
 import GridWrapper from '../GridWrapper';
+import type { ReactNode } from 'react';
 
 const keyValueText = (
   data: unknown,
   param: string,
   themeProps: { key: SxProps; value: SxProps }
-): React.ReactNode | null =>
+): ReactNode | null =>
   data ? (
     <GridWrapper
       key={param}

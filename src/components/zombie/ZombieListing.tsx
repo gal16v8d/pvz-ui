@@ -1,5 +1,5 @@
 import type { DataId } from '@/types/DataId';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 import ZombieCard from './ZombieCard';
 import ZombieDetails from './ZombieDetails';
@@ -9,9 +9,7 @@ interface ZombieListingProps {
   data: unknown[];
 }
 
-const ZombieListing: FC<ZombieListingProps> = ({
-  data,
-}): React.ReactElement => {
+const ZombieListing: FC<ZombieListingProps> = ({ data }): ReactElement => {
   return (
     <ZombieProvider>
       <GridWrapper

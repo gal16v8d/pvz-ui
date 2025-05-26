@@ -1,13 +1,13 @@
 import type { Item } from '@/api/models';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { Card, CardContent, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
 interface ItemCardProps {
   data: unknown;
 }
 
-const ItemCard: FC<ItemCardProps> = ({ data }): React.ReactElement => {
+const ItemCard: FC<ItemCardProps> = ({ data }): ReactElement => {
   const item = data as Item;
 
   return (

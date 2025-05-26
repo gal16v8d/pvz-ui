@@ -1,9 +1,9 @@
 import { homeTheme } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Box, Card, CardMedia, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
-const Home: FC = (): React.ReactElement => {
+const Home: FC = (): ReactElement => {
   const { t } = usePvZContext();
 
   return (

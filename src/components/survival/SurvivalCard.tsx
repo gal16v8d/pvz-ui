@@ -2,17 +2,17 @@ import type { Survival } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement, ReactNode } from 'react';
 
 interface SurvivalCardProps {
   data: unknown;
 }
 
-const SurvivalCard: FC<SurvivalCardProps> = ({ data }): React.ReactElement => {
+const SurvivalCard: FC<SurvivalCardProps> = ({ data }): ReactElement => {
   const { t } = usePvZContext();
   const survival = data as Survival;
 
-  const mapText = (input: string): React.ReactNode => (
+  const mapText = (input: string): ReactNode => (
     <Typography sx={cardThemeGraySx.title} component={'div'}>
       {input}
     </Typography>

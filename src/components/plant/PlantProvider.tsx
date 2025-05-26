@@ -1,10 +1,11 @@
 import type { Plant } from '@/api/models';
-import React, { useState } from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
+import { useState } from 'react';
 import { PlantContext } from './PlantContext';
 
 export const PlantProvider = (
-  props: React.PropsWithChildren<Record<string, unknown>>
-): React.ReactElement => {
+  props: PropsWithChildren<Record<string, unknown>>
+): ReactElement => {
   const [plant, setPlant] = useState<Plant>();
 
   return (

@@ -1,7 +1,7 @@
 import type { Zombie } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardActionArea, CardMedia } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import { useZombieContext } from './ZombieContext';
 import { TEST_ID } from '@/constants/testid';
 
@@ -9,7 +9,7 @@ interface ZombieCardProps {
   data: unknown;
 }
 
-const ZombieCard: FC<ZombieCardProps> = ({ data }): React.ReactElement => {
+const ZombieCard: FC<ZombieCardProps> = ({ data }): ReactElement => {
   const { setZombie } = useZombieContext();
   const zombie = data as Zombie;
 

@@ -1,10 +1,10 @@
-import React from 'react';
+import type { PropsWithChildren, ReactElement } from 'react';
 import { useTranslation } from 'react-i18next';
 import { PvZContext } from './PvZContext';
 
 export const PvZProvider = (
-  props: React.PropsWithChildren<Record<string, unknown>>
-): React.ReactElement => {
+  props: PropsWithChildren<Record<string, unknown>>
+): ReactElement => {
   const { t } = useTranslation();
 
   return (

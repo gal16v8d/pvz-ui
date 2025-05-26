@@ -6,14 +6,14 @@ import { ARR_JOINER } from '@/constants/constants';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, Chip, CircularProgress } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement, ReactNode } from 'react';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 
 interface LevelCardProps {
   data: unknown;
 }
 
-const LevelCard: FC<LevelCardProps> = ({ data }): React.ReactElement => {
+const LevelCard: FC<LevelCardProps> = ({ data }): ReactElement => {
   const { t } = usePvZContext();
   const level = data as Level;
   const plantConfig = API_BASE_CONFIG.filter(
@@ -49,13 +49,13 @@ const LevelCard: FC<LevelCardProps> = ({ data }): React.ReactElement => {
     return <CircularProgress />;
   }
 
-  const keyValueText = (data: unknown, param: string): React.ReactNode | null =>
+  const keyValueText = (data: unknown, param: string): ReactNode | null =>
     gridKeyValueText(data, param, {
       key: cardThemeBrownSx.title,
       value: cardThemeBrownSx.body,
     });
 
-  const mapUnlockKeyAndValue = (level: Level): React.ReactNode | null => {
+  const mapUnlockKeyAndValue = (level: Level): ReactNode | null => {
     let uiValue;
     if (level.ref === itemConfig.name) {
       const itemsArr = items as Item[];

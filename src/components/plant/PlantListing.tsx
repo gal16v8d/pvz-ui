@@ -1,5 +1,5 @@
 import type { Plant } from '@/api/models';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 import PlantCard from './PlantCard';
 import PlantDetails from './PlantDetails';
@@ -9,7 +9,7 @@ interface PlantListingProps {
   data: unknown[];
 }
 
-const PlantListing: FC<PlantListingProps> = ({ data }): React.ReactElement => {
+const PlantListing: FC<PlantListingProps> = ({ data }): ReactElement => {
   const plants = (data as Plant[])?.sort((a, b) => a.number - b.number);
 
   return (

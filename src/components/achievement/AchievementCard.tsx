@@ -1,16 +1,14 @@
 import type { Achievement } from '@/api/models';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import GridWrapper from '../ui/GridWrapper';
 
 interface AchievementCardProps {
   data: unknown;
 }
 
-const AchievementCard: FC<AchievementCardProps> = ({
-  data,
-}): React.ReactElement => {
+const AchievementCard: FC<AchievementCardProps> = ({ data }): ReactElement => {
   const achievement = data as Achievement;
 
   return (

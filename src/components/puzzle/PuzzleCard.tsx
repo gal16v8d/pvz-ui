@@ -2,13 +2,13 @@ import { VASEBREAKER, type Puzzle } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
 interface PuzzleCardProps {
   data: unknown;
 }
 
-const PuzzleCard: FC<PuzzleCardProps> = ({ data }): React.ReactElement => {
+const PuzzleCard: FC<PuzzleCardProps> = ({ data }): ReactElement => {
   const { t } = usePvZContext();
   const puzzle = data as Puzzle;
 

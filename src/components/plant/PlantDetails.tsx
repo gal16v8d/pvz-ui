@@ -5,8 +5,9 @@ import type { SxProps } from '@mui/material';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantContext';
+import type { ReactElement, ReactNode } from 'react';
 
-const PlantDetails = (): React.ReactElement | null => {
+const PlantDetails = (): ReactElement | null => {
   const { t } = usePvZContext();
   const { plant } = usePlantContext();
 
@@ -14,7 +15,7 @@ const PlantDetails = (): React.ReactElement | null => {
     return null;
   }
 
-  const keyValueText = (data: unknown, param: string): React.ReactNode | null =>
+  const keyValueText = (data: unknown, param: string): ReactNode | null =>
     gridKeyValueText(data, param, {
       key: cardThemePlantSx.key,
       value: cardThemePlantSx.value,

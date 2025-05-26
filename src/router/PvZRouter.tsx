@@ -7,8 +7,9 @@ import PageHeader from '../components/ui/layout/PageHeader';
 import Listing from '../components/ui/Listing';
 import PvZMenu from '../components/ui/PvZMenu';
 import { API_BASE_CONFIG } from '../config/ApiBaseConfig';
+import type { ReactElement } from 'react';
 
-const PvZRouter = (): React.ReactElement => {
+const PvZRouter = (): ReactElement => {
   return (
     <>
       <PageHeader />

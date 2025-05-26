@@ -1,13 +1,13 @@
 import type { MiniGame } from '@/api/models';
 import { cardThemeGraySx } from '@/constants/theme';
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 
 interface MiniGameCardProps {
   data: unknown;
 }
 
-const MiniGameCard: FC<MiniGameCardProps> = ({ data }): React.ReactElement => {
+const MiniGameCard: FC<MiniGameCardProps> = ({ data }): ReactElement => {
   const minigame = data as MiniGame;
 
   return (

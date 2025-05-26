@@ -13,7 +13,7 @@ import {
   SwipeableDrawer,
 } from '@mui/material';
 import type { TFunction } from 'i18next';
-import type { FC } from 'react';
+import type { FC, ReactElement } from 'react';
 import { useState } from 'react';
 import type { NavigateFunction } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
@@ -31,7 +31,7 @@ const mapApiToMenu = (
     };
   });
 
-const PvZMenu: FC = (): React.ReactElement => {
+const PvZMenu: FC = (): ReactElement => {
   const { t } = usePvZContext();
   const navigate = useNavigate();
   const options = mapApiToMenu(t, navigate);

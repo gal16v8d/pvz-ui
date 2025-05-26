@@ -10,11 +10,12 @@ import SurvivalCard from '@/components/survival/SurvivalCard';
 import ZombieListing from '@/components/zombie/ZombieListing';
 import { API_OBJECT } from '@/config/ApiBaseConfig';
 import type { DataId } from '@/types/DataId';
+import type { ReactNode } from 'react';
 
 export const mapIndividualData = (
   apiObject: ApiConfig,
   data: unknown
-): React.ReactNode | null => {
+): ReactNode | null => {
   const key = (data as DataId)._id;
 
   switch (apiObject.name) {
@@ -40,7 +41,7 @@ export const mapIndividualData = (
 export const mapListData = (
   apiObject: ApiConfig,
   data: unknown[]
-): React.ReactNode | null => {
+): ReactNode | null => {
   switch (apiObject.name) {
     case API_OBJECT.PLANT:
       return <PlantListing data={data} />;
