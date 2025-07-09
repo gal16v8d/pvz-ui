@@ -10,7 +10,8 @@
       "unlock": "Unlock"
     },
     "home": {
-      "text": "Please click the upper-left corner menu to explore the wiki info"
+      "text": "Please click the upper-left corner menu to explore the wiki info",
+      "support_me": "Support me on Ko-fi"
     },
     "plant": {
       "cost": "Cost",
