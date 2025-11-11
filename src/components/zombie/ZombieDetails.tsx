@@ -2,19 +2,14 @@ import type { Plant } from '@/api/models';
 import { get } from '@/api/services/CrudService';
 import { useGet } from '@/api/services/hooks/useGenericService';
 import { API_BASE_CONFIG, API_OBJECT } from '@/config/ApiBaseConfig';
-import { ARR_JOINER } from '@/constants/constants';
+import { ARR_JOINER, ZOMBIE_IMAGES } from '@/constants/constants';
 import { cardThemeZombieSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  CircularProgress,
-  Typography,
-} from '@mui/material';
+import { Card, CardContent, CircularProgress, Typography } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { useZombieContext } from './ZombieContext';
 import type { ReactElement, ReactNode } from 'react';
+import MediaCard from '../base/MediaCard';
 
 const ZombieDetails = (): ReactElement | null => {
   const { t } = usePvZContext();
@@ -28,7 +23,7 @@ const ZombieDetails = (): ReactElement | null => {
     `/api/${plantConfig.route}`,
     false,
     {
-      cacheTime: Infinity,
+      gcTime: Infinity,
       staleTime: Infinity,
     }
   );
@@ -48,10 +43,10 @@ const ZombieDetails = (): ReactElement | null => {
     });
 
   const transformWeakness = (
-    weakness: string[] | undefined
+    weakness: Array<string> | undefined
   ): string | undefined => {
     if (weakness) {
-      const plantsArr = plants as Plant[];
+      const plantsArr = plants as Array<Plant>;
       const filteredPlants = plantsArr
         ?.filter((plant) => weakness.includes(plant?._id || ''))
         .map((plant) => plant.name);
@@ -69,11 +64,11 @@ const ZombieDetails = (): ReactElement | null => {
 
   return (
     <Card sx={cardThemeZombieSx.base}>
-      <CardMedia
-        component={'img'}
+      <MediaCard
+        images={ZOMBIE_IMAGES}
+        data={zombie}
+        dataType="zombies"
         sx={cardThemeZombieSx.media}
-        image={`/assets/zombies/${zombie._id}.png`}
-        title={`zombie-${zombie._id}`}
       />
       <CardContent>
         <Typography sx={cardThemeZombieSx.title}>{zombie?.name}</Typography>

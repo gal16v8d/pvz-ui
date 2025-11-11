@@ -1,8 +1,10 @@
 import type { Garden } from '@/api/models';
+import { GARDEN_IMAGES } from '@/constants/constants';
 import { cardThemeBrownSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
-import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
+import { Card, CardContent, Chip, Typography } from '@mui/material';
 import type { FC, ReactElement } from 'react';
+import MediaCard from '../base/MediaCard';
 
 interface GardenCardProps {
   data: unknown;
@@ -14,10 +16,11 @@ const GardenCard: FC<GardenCardProps> = ({ data }): ReactElement => {
 
   return (
     <Card sx={cardThemeBrownSx.base}>
-      <CardMedia
+      <MediaCard
+        data={garden}
+        dataType="gardens"
+        images={GARDEN_IMAGES}
         sx={{ height: 280 }}
-        image={`/assets/gardens/${garden._id}.png`}
-        title={`garden-${garden._id}`}
       />
       <CardContent>
         <Typography sx={cardThemeBrownSx.title} component={'div'}>

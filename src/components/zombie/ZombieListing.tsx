@@ -6,7 +6,7 @@ import ZombieDetails from './ZombieDetails';
 import { ZombieProvider } from './ZombieProvider';
 
 interface ZombieListingProps {
-  data: unknown[];
+  data: Array<unknown>;
 }
 
 const ZombieListing: FC<ZombieListingProps> = ({ data }): ReactElement => {

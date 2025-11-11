@@ -18,7 +18,7 @@ const Listing: FC<ListingProps> = ({ apiObject }): ReactElement => {
     `/api/${apiObject.route}`,
     false,
     {
-      cacheTime: Infinity,
+      gcTime: Infinity,
       staleTime: Infinity,
     }
   );

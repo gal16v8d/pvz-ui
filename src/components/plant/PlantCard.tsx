@@ -1,9 +1,11 @@
 import type { Plant } from '@/api/models';
+import { PLANT_IMAGES } from '@/constants/constants';
+import { TEST_ID } from '@/constants/testid';
 import { cardThemeGraySx } from '@/constants/theme';
-import { Card, CardActionArea, CardMedia } from '@mui/material';
+import { Card, CardActionArea } from '@mui/material';
 import type { FC, ReactElement } from 'react';
 import { usePlantContext } from './PlantContext';
-import { TEST_ID } from '@/constants/testid';
+import MediaCard from '../base/MediaCard';
 
 interface PlantCardProps {
   data: unknown;
@@ -16,11 +18,12 @@ const PlantCard: FC<PlantCardProps> = ({ data }): ReactElement => {
   return (
     <Card sx={cardThemeGraySx.base}>
       <CardActionArea onClick={() => setPlant(plant)}>
-        <CardMedia
-          data-testid={`${TEST_ID.PlantCard}-${plant._id}`}
+        <MediaCard
+          data={plant}
+          dataType="plants"
+          images={PLANT_IMAGES}
           sx={cardThemeGraySx.media}
-          image={`/assets/plants/${plant._id}.png`}
-          title={`plant-${plant._id}`}
+          testId={TEST_ID.PlantCard}
         />
       </CardActionArea>
     </Card>

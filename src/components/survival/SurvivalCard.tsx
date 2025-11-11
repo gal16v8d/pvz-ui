@@ -1,8 +1,10 @@
 import type { Survival } from '@/api/models';
+import { SURVIVAL_IMAGES } from '@/constants/constants';
 import { cardThemeGraySx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
-import { Card, CardContent, CardMedia, Chip, Typography } from '@mui/material';
+import { Card, CardContent, Chip, Typography } from '@mui/material';
 import type { FC, ReactElement, ReactNode } from 'react';
+import MediaCard from '../base/MediaCard';
 
 interface SurvivalCardProps {
   data: unknown;
@@ -20,10 +22,11 @@ const SurvivalCard: FC<SurvivalCardProps> = ({ data }): ReactElement => {
 
   return (
     <Card sx={cardThemeGraySx.base}>
-      <CardMedia
+      <MediaCard
+        images={SURVIVAL_IMAGES}
+        data={survival}
+        dataType="survivals"
         sx={cardThemeGraySx.media}
-        image={`/assets/survivals/${survival._id}.png`}
-        title={`survival-${survival._id}`}
       />
       <CardContent>
         {mapText(survival.name)}

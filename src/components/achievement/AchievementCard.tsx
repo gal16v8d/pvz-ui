@@ -1,8 +1,10 @@
 import type { Achievement } from '@/api/models';
+import { ACHIEVEMENT_IMAGES } from '@/constants/constants';
 import { cardThemeBrownSx } from '@/constants/theme';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 import type { FC, ReactElement } from 'react';
 import GridWrapper from '../ui/GridWrapper';
+import MediaCard from '../base/MediaCard';
 
 interface AchievementCardProps {
   data: unknown;
@@ -18,11 +20,11 @@ const AchievementCard: FC<AchievementCardProps> = ({ data }): ReactElement => {
         gridId={`achievement-${achievement._id}`}
         child={
           <>
-            <CardMedia
+            <MediaCard
+              data={achievement}
+              dataType="achievements"
+              images={ACHIEVEMENT_IMAGES}
               sx={cardThemeBrownSx.media}
-              component={'img'}
-              image={`/assets/achievements/${achievement._id}.png`}
-              title={`achievements-${achievement._id}`}
             />
             <CardContent>
               <Typography sx={cardThemeBrownSx.title} component={'div'}>

@@ -1,9 +1,11 @@
 import type { Zombie } from '@/api/models';
+import { ZOMBIE_IMAGES } from '@/constants/constants';
+import { TEST_ID } from '@/constants/testid';
 import { cardThemeGraySx } from '@/constants/theme';
-import { Card, CardActionArea, CardMedia } from '@mui/material';
+import { Card, CardActionArea } from '@mui/material';
 import type { FC, ReactElement } from 'react';
 import { useZombieContext } from './ZombieContext';
-import { TEST_ID } from '@/constants/testid';
+import MediaCard from '../base/MediaCard';
 
 interface ZombieCardProps {
   data: unknown;
@@ -16,11 +18,12 @@ const ZombieCard: FC<ZombieCardProps> = ({ data }): ReactElement => {
   return (
     <Card sx={cardThemeGraySx.base}>
       <CardActionArea onClick={() => setZombie(zombie)}>
-        <CardMedia
-          data-testid={`${TEST_ID.ZombieCard}-${zombie._id}`}
+        <MediaCard
+          images={ZOMBIE_IMAGES}
+          data={zombie}
+          dataType="zombies"
           sx={cardThemeGraySx.media}
-          image={`/assets/zombies/${zombie._id}.png`}
-          title={`zombie-${zombie._id}`}
+          testId={TEST_ID.ZombieCard}
         />
       </CardActionArea>
     </Card>

@@ -14,7 +14,7 @@ const App: FC = (): ReactElement => {
         // Api is not updated so often, so this can be Infinity
         // to avoid multiple fetch to Db, and avoid to consume a lot of
         // railway backend free tier
-        cacheTime: Infinity,
+        gcTime: Infinity,
       },
     },
   });

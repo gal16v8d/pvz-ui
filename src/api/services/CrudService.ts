@@ -2,7 +2,7 @@ import { httpGet, httpPost, httpPut, httpDelete } from './BaseService';
 
 const defaultHeaders = (): Record<string, string> => ({});
 
-const get = async (baseUri: string, expanded?: boolean): Promise<unknown[]> => {
+const get = async (baseUri: string, expanded?: boolean): Promise<Array<unknown>> => {
   const response = await httpGet(`${baseUri}?expanded=${expanded ?? false}`, {
     headers: defaultHeaders(),
   });

@@ -4,33 +4,33 @@ import { useMutation, useQuery } from '@tanstack/react-query';
 
 const useGet = (
   queryKey: string,
-  getCall: (uri: string, expanded?: boolean) => Promise<unknown[]>,
+  getCall: (uri: string, expanded?: boolean) => Promise<Array<unknown>>,
   uri: string,
   expanded?: boolean,
   payload?: {
-    onSuccess?: (response: unknown[]) => void;
+    onSuccess?: (response: Array<unknown>) => void;
     onError?: (error: ApiError) => void;
     enabled?: boolean;
-    cacheTime?: number;
+    gcTime?: number;
     staleTime?: number;
     refetchOnMount?: boolean;
   }
-): UseQueryResult<unknown[], ApiError> =>
+): UseQueryResult<Array<unknown>, ApiError> =>
   useQuery({
     queryKey: [queryKey],
     queryFn: async () => getCall(uri, expanded),
-    cacheTime: payload?.cacheTime ?? undefined,
-    staleTime: payload?.cacheTime ?? undefined,
-    enabled: payload?.enabled === undefined || payload?.enabled,
-    onSuccess: (response: unknown[]) => {
-      payload?.onSuccess && payload.onSuccess(response);
+    ...{
+      gcTime: payload?.gcTime ?? undefined,
+      staleTime: payload?.staleTime ?? undefined,
+      enabled: payload?.enabled === undefined || payload?.enabled,
+      onSuccess: (response: Array<unknown>) => payload?.onSuccess?.(response),
+      onError: (error: ApiError) => {
+        console.warn('error -> ', error?.message);
+        payload?.onError?.(error);
+      },
+      refetchOnMount:
+        payload?.refetchOnMount === undefined || payload.refetchOnMount,
     },
-    onError: (error: ApiError) => {
-      console.warn('error -> ', error?.message);
-      payload?.onError && payload.onError(error);
-    },
-    refetchOnMount:
-      payload?.refetchOnMount === undefined || payload.refetchOnMount,
   });
 
 const useSave = (
@@ -51,10 +51,10 @@ const useSave = (
 > =>
   useMutation({
     mutationFn: ({ data }: { data: unknown }) => postCall(uri, data),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not create the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 
@@ -78,10 +78,10 @@ const useUpdate = (
   useMutation({
     mutationFn: ({ id, data }: { id: string; data: unknown }) =>
       putCall(uri, id, data),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not update the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 
@@ -103,10 +103,10 @@ const useDelete = (
 > =>
   useMutation({
     mutationFn: ({ id }: { id: string }) => deleteCall(uri, id),
-    onSuccess: () => payload?.onSuccess && payload?.onSuccess(),
+    onSuccess: () => payload?.onSuccess?.(),
     onError: (err: ApiError) => {
       console.warn(`Could not delete the ${apiObject}`, err?.message);
-      return payload?.onError && payload?.onError(err);
+      return payload?.onError?.(err);
     },
   });
 

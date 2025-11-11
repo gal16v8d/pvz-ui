@@ -1,7 +1,9 @@
 import type { MiniGame } from '@/api/models';
+import { MINIGAME_IMAGES } from '@/constants/constants';
 import { cardThemeGraySx } from '@/constants/theme';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 import type { FC, ReactElement } from 'react';
+import MediaCard from '../base/MediaCard';
 
 interface MiniGameCardProps {
   data: unknown;
@@ -12,10 +14,11 @@ const MiniGameCard: FC<MiniGameCardProps> = ({ data }): ReactElement => {
 
   return (
     <Card sx={cardThemeGraySx.base}>
-      <CardMedia
+      <MediaCard
+        data={minigame}
+        dataType="minigames"
+        images={MINIGAME_IMAGES}
         sx={cardThemeGraySx.media}
-        image={`/assets/minigames/${minigame._id}.png`}
-        title={`minigame-${minigame._id}`}
       />
       <CardContent>
         <Typography

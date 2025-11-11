@@ -29,7 +29,7 @@ const LevelCard: FC<LevelCardProps> = ({ data }): ReactElement => {
     `/api/${plantConfig.route}`,
     false,
     {
-      cacheTime: Infinity,
+      gcTime: Infinity,
       staleTime: Infinity,
     }
   );
@@ -40,7 +40,7 @@ const LevelCard: FC<LevelCardProps> = ({ data }): ReactElement => {
     `/api/${itemConfig.route}`,
     false,
     {
-      cacheTime: Infinity,
+      gcTime: Infinity,
       staleTime: Infinity,
     }
   );
@@ -58,7 +58,7 @@ const LevelCard: FC<LevelCardProps> = ({ data }): ReactElement => {
   const mapUnlockKeyAndValue = (level: Level): ReactNode | null => {
     let uiValue;
     if (level.ref === itemConfig.name) {
-      const itemsArr = items as Item[];
+      const itemsArr = items as Array<Item>;
       const filteredItems = itemsArr
         ?.filter((item) => level.unlock.includes(item?._id || ''))
         .map((item) => item.name);
@@ -67,7 +67,7 @@ const LevelCard: FC<LevelCardProps> = ({ data }): ReactElement => {
         t('components.level.unlock')
       );
     } else if (level.ref === plantConfig.name) {
-      const plantsArr = plants as Plant[];
+      const plantsArr = plants as Array<Plant>;
       const filteredPlants = plantsArr
         ?.filter((plant) => level.unlock.includes(plant?._id || ''))
         .map((plant) => plant.name);

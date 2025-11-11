@@ -18,24 +18,17 @@ const EXTEND_GRID_COL = 1;
 const DEFAULT_GRID_COL = 2;
 const BIG_GRID_COL = 5;
 
-const resolveGridColumns = (config: string): number => {
-  switch (config) {
-    case API_OBJECT.MINIGAME:
-      return BIG_GRID_COL;
-    case API_OBJECT.PLANT:
-      return EXTEND_GRID_COL;
-    case API_OBJECT.PUZZLE:
-      return BIG_GRID_COL;
-    case API_OBJECT.SURVIVAL:
-      return BIG_GRID_COL;
-    case API_OBJECT.ZOMBIE:
-      return EXTEND_GRID_COL;
-    default:
-      return DEFAULT_GRID_COL;
-  }
+const GRID_COLUMN_OPTIONS: Record<string, number> = {
+  [API_OBJECT.MINIGAME]: BIG_GRID_COL,
+  [API_OBJECT.PLANT]: EXTEND_GRID_COL,
+  [API_OBJECT.PUZZLE]: BIG_GRID_COL,
+  [API_OBJECT.SURVIVAL]: BIG_GRID_COL,
+  [API_OBJECT.ZOMBIE]: EXTEND_GRID_COL,
 };
 
-export const API_BASE_CONFIG: ApiConfig[] = Object.values(API_OBJECT).map(
+const resolveGridColumns = (config: string): number => GRID_COLUMN_OPTIONS[config] ?? DEFAULT_GRID_COL;
+
+export const API_BASE_CONFIG: Array<ApiConfig> = Object.values(API_OBJECT).map(
   (config) => ({
     name: config,
     expanded: config === 'zombie',

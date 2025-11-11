@@ -6,11 +6,11 @@ import PlantDetails from './PlantDetails';
 import { PlantProvider } from './PlantProvider';
 
 interface PlantListingProps {
-  data: unknown[];
+  data: Array<unknown>;
 }
 
 const PlantListing: FC<PlantListingProps> = ({ data }): ReactElement => {
-  const plants = (data as Plant[])?.sort((a, b) => a.number - b.number);
+  const plants = (data as Array<Plant>)?.sort((a, b) => a.number - b.number);
 
   return (
     <PlantProvider>

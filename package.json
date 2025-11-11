@@ -1,8 +1,9 @@
 {
   "name": "pvz-ui",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.1",
   "type": "module",
+  "main": "electron/main.cjs",
   "engines": {
     "node": ">=22.0.0 < 23.0.0"
   },
@@ -12,7 +13,12 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged",
+    "electron:start": "concurrently \"npm run dev\" \"sleep 1 && electron .\"",
+    "electron:build": "npm run build && electron-builder build --publish never",
     "generate-api-model": "sh generate-api-model.sh && prettier --write 'src/api/models/*.*ts'"
   },
   "dependencies": {
@@ -20,37 +26,71 @@
     "@emotion/styled": "^11.10.6",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.12",
-    "@tanstack/react-query": "^4.29.5",
-    "@tanstack/react-query-devtools": "^4.29.6",
-    "i18next": "^25.1.1",
-    "i18next-browser-languagedetector": "^8.1.0",
+    "@tanstack/react-query": "^5.90.7",
+    "@tanstack/react-query-devtools": "^5.90.2",
+    "i18next-browser-languagedetector": "^8.2.0",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-i18next": "^12.2.0",
+    "react-i18next": "^16.2.4",
     "react-router-dom": "^6.11.1"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.7.0",
+    "@eslint/js": "^9.39.1",
+    "@openapitools/openapi-generator-cli": "^2.25.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "@types/node": "^24.10.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.57.1",
-    "@typescript-eslint/parser": "^5.57.1",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "jsdom": "^22.0.0",
-    "msw": "^2.6.5",
-    "node-fetch": "^3.3.1",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.2",
-    "vite": "^6.3.5",
-    "vitest": "^3.1.3"
+    "@vitejs/plugin-react": "^5.1.0",
+    "@vitest/coverage-v8": "^4.0.8",
+    "concurrently": "^9.2.1",
+    "electron": "^39.1.2",
+    "electron-builder": "^26.0.12",
+    "electron-is": "^3.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "husky": "^9.1.7",
+    "jsdom": "^27.1.0",
+    "lint-staged": "^16.2.6",
+    "msw": "^2.12.1",
+    "node-fetch": "^3.3.2",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.2",
+    "vitest": "^4.0.8"
+  },
+  "lint-staged": {
+    "*.{js, jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,html}": [
+      "prettier --write --ignore-unknown"
+    ]
   },
   "msw": {
     "workerDirectory": "public"
+  },
+  "build": {
+    "appId": "com.gsdd",
+    "productName": "pvz-ui",
+    "files": [
+      "build/**/*",
+      "electron/main.cjs",
+      "package.json"
+    ],
+    "extends": null,
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "type": "distribution"
+    },
+    "win": {
+      "target": "portable"
+    }
   }
 }

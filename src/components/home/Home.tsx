@@ -2,6 +2,8 @@ import { homeTheme } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import { Box, Button, Card, CardMedia, Typography } from '@mui/material';
 import type { FC, ReactElement } from 'react';
+import homeCentralImage from '@/assets/home/pvz.png';
+import koFiImage from '@/assets/home/kofi.png';
 
 const Home: FC = (): ReactElement => {
   const { t } = usePvZContext();
@@ -23,7 +25,7 @@ const Home: FC = (): ReactElement => {
       <Card sx={homeTheme.body}>
         <CardMedia
           sx={homeTheme.media}
-          image={'/assets/home/pvz.png'}
+          image={homeCentralImage}
           title={'logo'}
         />
       </Card>
@@ -49,7 +51,7 @@ const Home: FC = (): ReactElement => {
             }}
           >
             <img
-              src={'/assets/home/kofi.png'}
+              src={koFiImage}
               alt={'Ko-fi Cup'}
               style={{ width: '24px', height: '24px' }}
             />

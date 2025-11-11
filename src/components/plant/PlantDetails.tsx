@@ -1,11 +1,12 @@
-import { ARR_JOINER } from '@/constants/constants';
+import { ARR_JOINER, PLANT_IMAGES } from '@/constants/constants';
 import { cardThemePlantSx } from '@/constants/theme';
 import { usePvZContext } from '@/provider/PvZContext';
 import type { SxProps } from '@mui/material';
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Card, CardContent, Typography } from '@mui/material';
 import { keyValueText as gridKeyValueText } from '../ui/utils/valueMapping';
 import { usePlantContext } from './PlantContext';
 import type { ReactElement, ReactNode } from 'react';
+import MediaCard from '../base/MediaCard';
 
 const PlantDetails = (): ReactElement | null => {
   const { t } = usePvZContext();
@@ -33,11 +34,11 @@ const PlantDetails = (): ReactElement | null => {
 
   return (
     <Card sx={cardThemePlantSx.base}>
-      <CardMedia
-        component={'img'}
+      <MediaCard
+        data={plant}
+        dataType="plants"
+        images={PLANT_IMAGES}
         sx={cardThemePlantSx.media}
-        image={`/assets/plants/${plant._id}.png`}
-        title={`plant-${plant._id}`}
       />
       <CardContent>
         <Typography sx={cardThemePlantSx.title}>{plant.name}</Typography>
