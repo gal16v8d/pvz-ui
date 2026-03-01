@@ -1,0 +1,59 @@
+{
+  "components": {
+    "garden": {
+      "coin_helper": "コインヘルパー",
+      "max_plants": "最大植物数"
+    },
+    "level": {
+      "level": "レベル",
+      "minigame": "ミニゲーム",
+      "unlock": "アンロック"
+    },
+    "home": {
+      "text": "左上のメニューをクリックして、このWikiを探索してください。",
+      "support_me": "Ko-fiで応援する"
+    },
+    "plant": {
+      "cost": "コスト",
+      "damage": "ダメージ",
+      "firing_spd": "攻撃速度",
+      "range": "範囲",
+      "recharge": "チャージ",
+      "special": "特殊",
+      "sun_prod": "太陽生産",
+      "toughness": "耐久力",
+      "usage": "使い方"
+    },
+    "puzzle": {
+      "streak": "ストリーク"
+    },
+    "survival": {
+      "endless": "エンドレス",
+      "flags": "フラッグ"
+    },
+    "zombie": {
+      "special": "特殊",
+      "speed": "速度",
+      "toughness": "耐久力",
+      "weakness": "弱点"
+    }
+  },
+  "header": {
+    "title": "植物 vs. ゾンビ - Wiki"
+  },
+  "footer": {
+    "by": "作成者：",
+    "licence": "ソースライセンス："
+  },
+  "menu": {
+    "achievement": "実績",
+    "garden": "ゼンガーデン",
+    "item": "アイテム",
+    "level": "レベル",
+    "minigame": "ミニゲーム",
+    "plant": "植物",
+    "puzzle": "パズル",
+    "survival": "サバイバル",
+    "zombie": "ゾンビ"
+  }
+}

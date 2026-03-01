@@ -1,0 +1,59 @@
+{
+  "components": {
+    "garden": {
+      "coin_helper": "硬币助手",
+      "max_plants": "最大植物数量"
+    },
+    "level": {
+      "level": "关卡",
+      "minigame": "小游戏",
+      "unlock": "解锁"
+    },
+    "home": {
+      "text": "点击左上角的菜单以浏览此百科。",
+      "support_me": "在 Ko-fi 上支持我"
+    },
+    "plant": {
+      "cost": "阳光消耗",
+      "damage": "伤害",
+      "firing_spd": "射击速度",
+      "range": "范围",
+      "recharge": "冷却时间",
+      "special": "特殊",
+      "sun_prod": "阳光生产",
+      "toughness": "韧性",
+      "usage": "用法"
+    },
+    "puzzle": {
+      "streak": "连胜"
+    },
+    "survival": {
+      "endless": "无尽模式",
+      "flags": "旗帜"
+    },
+    "zombie": {
+      "special": "特殊",
+      "speed": "速度",
+      "toughness": "韧性",
+      "weakness": "弱点"
+    }
+  },
+  "header": {
+    "title": "植物大战僵尸 - 百科"
+  },
+  "footer": {
+    "by": "作者：",
+    "licence": "源码许可证："
+  },
+  "menu": {
+    "achievement": "成就",
+    "garden": "花园",
+    "item": "物品",
+    "level": "关卡",
+    "minigame": "小游戏",
+    "plant": "植物",
+    "puzzle": "解谜",
+    "survival": "生存模式",
+    "zombie": "僵尸"
+  }
+}
