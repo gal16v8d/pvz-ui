@@ -9,6 +9,10 @@ This UI consumes a python API (see pvz-svc repo) who currently is not alive, sin
 
 In the project directory, create a `.env` file (you can inspect available sample `.env.sample`), then you can use the following commands:
 
+### setup
+
+NOTE: as ignore-scripts flag was added might need to run npx husky to install pre-commit hook
+
 ### `npm run dev`
 
 Runs the app in the development mode.\
