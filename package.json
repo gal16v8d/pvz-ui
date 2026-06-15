@@ -8,6 +8,8 @@
     "node": ">=24.0.0 < 25.0.0"
   },
   "scripts": {
+    "preinstall": "npm config set ignore-scripts true",
+    "postinstall": "npm config set ignore-scripts false",
     "dev": "vite",
     "dev:docker": "vite --host",
     "build": "tsc && vite build",
@@ -37,15 +39,15 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
-    "@openapitools/openapi-generator-cli": "^2.25.0",
+    "@openapitools/openapi-generator-cli": "^2.34.0",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/node": "^24.10.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "@vitejs/plugin-react": "^5.1.0",
+    "@vitejs/plugin-react": "^6.0.2",
     "@vitest/coverage-v8": "^4.0.8",
-    "concurrently": "^9.2.1",
+    "concurrently": "^10.0.3",
     "electron": "^39.1.2",
     "electron-builder": "^26.0.12",
     "electron-is": "^3.0.0",
@@ -60,7 +62,7 @@
     "prettier": "^3.6.2",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.2",
+    "vite": "^8.0.16",
     "vitest": "^4.0.8"
   },
   "lint-staged": {
